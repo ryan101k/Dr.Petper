@@ -1,109 +1,151 @@
 /* main.css */
-/* 메인 페이지용 스타일 및 반응형 설정 */
-
+/* 기본 레이아웃 스타일 */
 body {
-    /* Arial 폰트를 기본으로 사용하며, 페이지에 기본 여백을 없애고 배경색을 밝은 회색으로 설정 */
-    font-family: Arial, sans-serif;
+    /* 기본 폰트 설정과 배경색, 여백 제거 */
+    font-family: 'Noto Sans KR', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
 }
 
 main {
-    /* 메인 콘텐츠 영역에 20px의 패딩을 추가하여 콘텐츠가 화면 가장자리와 붙지 않도록 함 */
+    /* 메인 콘텐츠를 가로로 배치하고, 간격을 설정 */
+    display: flex;
+    gap: 20px;
     padding: 20px;
 }
 
-.main-banner {
-    /* 메인 배너 영역의 배경을 연한 회색으로 설정하고, 텍스트를 중앙 정렬, 상하 여백을 넉넉히 줌 */
-    background-color: #ddd;
-    text-align: center;
-    padding: 50px 0;
-    margin-bottom: 30px;
+.popular-questions {
+    /* 인기 질문 영역을 전체 가로폭의 2/3 차지 */
+    flex: 2;
 }
 
-.main-banner h1 {
-    /* 배너 제목의 글자 크기를 크게 설정 (2.5em), 상하 여백을 제거 */
-    font-size: 2.5em;
-    margin: 0;
+.popular-questions h2 {
+    /* 제목 크기를 설정 */
+    font-size: 1.8em;
+    margin-bottom: 20px;
 }
 
-.main-banner p {
-    /* 배너 설명 텍스트의 글자 크기를 1.2em으로 설정하고, 상단 여백을 추가하여 제목과의 간격을 확보 */
-    font-size: 1.2em;
-    margin-top: 10px;
-    color: #555;
-}
-
-.info-section {
-    /* 정보 섹션의 배경을 흰색으로 설정하고, 패딩을 20px로, 하단 여백을 30px로 설정하여 다른 섹션과 구분 */
+.question-card {
+    /* 질문 카드를 흰색 배경으로 설정하고, 패딩과 테두리를 추가 */
     background-color: #fff;
     padding: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
 }
 
-.info-section .text-content p {
-    /* 정보 섹션 안의 텍스트에 아래쪽 여백을 20px 주어 각 문단 간에 간격을 줌, 줄 간격을 1.6배로 설정 */
-    margin-bottom: 20px;
-    line-height: 1.6;
+.question-info {
+    /* 질문 정보(카테고리, 사용자 이름, 날짜)를 가로로 배치하고, 간격 설정 */
+    display: flex;
+    gap: 10px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.question-info .category {
+    /* 카테고리 이름을 파란색과 굵은 글씨로 설정 */
+    color: #007bff;
+    font-weight: bold;
+}
+
+.question-card h3 {
+    /* 질문 제목의 마진과 크기를 설정 */
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.response-count {
+    /* 답변 수 카운트를 파란색과 굵은 글씨로 설정 */
+    margin-top: 10px;
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+    /* 사이드바를 전체 가로폭의 1/3 차지 */
+    flex: 1;
+}
+
+.trending-topics, .signup-promo {
+    /* 사이드바의 각 섹션에 흰색 배경과 패딩, 테두리를 추가 */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+}
+
+.trending-topics h3 {
+    /* 인기 토픽 제목의 크기를 설정 */
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.trending-topics ul {
+    /* 리스트 스타일 제거 및 패딩 없애기 */
+    list-style: none;
+    padding: 0;
+}
+
+.trending-topics ul li {
+    /* 리스트 아이템 간 간격을 설정하고, 색상을 파란색으로 */
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #007bff;
+}
+
+.signup-promo h3 {
+    /* 회원가입 프로모션 제목 크기 설정 */
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.signup-promo p {
+    /* 설명 텍스트의 크기와 색상을 설정 */
+    margin-bottom: 15px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.signup-promo button {
+    /* 회원가입 버튼 스타일 설정 */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    /* 푸터 배경색과 패딩, 텍스트 정렬 및 색상 설정 */
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+    color: #888;
+}
+
+.footer-logo img {
+    /* 푸터 로고 이미지 크기를 100px로 설정 */
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.footer-info {
+    /* 푸터 정보 등록 링크에 10px의 위아래 여백을 추가 */
+    margin: 10px 0;
+}
+
+.footer-info a {
+    /* 푸터의 정보 등록 링크 색상을 회색으로 설정하고, 밑줄을 제거 */
     color: #333;
+    text-decoration: none;
 }
 
-/* 반응형 스타일 - 화면 너비에 따라 요소 크기와 레이아웃을 조정 */
-
-/* 작은 화면 (모바일용) */
-@media only screen and (max-width: 600px) {
-    .main-banner h1 {
-        /* 모바일 화면에서는 제목 크기를 조금 줄임 */
-        font-size: 2em;
-    }
-
-    .main-banner p {
-        /* 배너 설명 글자 크기를 줄여 가독성을 높임 */
-        font-size: 1em;
-    }
-
-    .info-section {
-        /* 정보 섹션의 패딩을 줄여 작은 화면에서도 적절히 표시되게 함 */
-        padding: 15px;
-    }
-
-    .top-bar {
-        /* 상단 바의 로고와 메뉴를 세로로 배치하여 좁은 화면에 적합하게 만듦 */
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo img {
-        /* 로고 크기를 더 작게 조정 */
-        width: 80px;
-    }
-
-    .user-menu ul {
-        /* 유저 메뉴 항목 간 간격을 줄여 모바일 화면에 맞춤 */
-        gap: 10px;
-    }
-}
-
-/* 중간 화면 (태블릿용) */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    .main-banner h1 {
-        /* 태블릿 화면에서는 제목 크기를 적당히 조절 */
-        font-size: 2.2em;
-    }
-
-    .main-banner p {
-        /* 설명 텍스트 크기를 살짝 줄여 표시 */
-        font-size: 1.1em;
-    }
-
-    .info-section {
-        /* 태블릿 화면에서는 약간 더 좁게 패딩을 적용 */
-        padding: 18px;
-    }
-
-    .logo img {
-        /* 태블릿 화면에서는 로고 크기를 중간 정도로 조정 */
-        width: 90px;
-    }
+.footer-info a:hover {
+    /* 푸터의 정보 등록 링크에 마우스 호버 시 색상 변경 */
+    color: #007bff;
 }

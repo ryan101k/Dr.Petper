@@ -10,9 +10,99 @@
 
     <!-- 메인 페이지 전용 CSS -->
     <link rel="stylesheet" href="/css/reset.css">
+
+    <!-- 질문하기 전용 CSS -->
+     <link rel="stylesheet" href="/css/board.css">
 </head>
 <body>
-    
+     <!-- Header -->
+     <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="/index/main.html">
+                    <img src="/img/logo.PNG" alt="Logo">
+                </a>
+            </div>
+            <div class="user-menu">
+                <ul>
+                    <li><a href="#profile">내정보</a></li>
+                    <li><a href="#topic2">Topic 2</a></li>
+                    <li><a href="#signup">회원가입</a></li>
+                    <li><a href="#login">로그인</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#notices">공지사항</a></li>
+                <li><a href="#consulting">질문하기</a></li>
+                <li><a href="#find-hospital">병원찾기</a></li>
+                <li><a href="#expert-apply">전문가신청</a></li>
+                <li><a href="#drug-info">약정보</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="board">
+        <h1>문의 글 남기기</h1>
+                
+            <form action="">
+                질문유형
+                <select name="" id="">
+                    <option value="">질문유형 선택</option>
+                    <option value="">전문가 상담</option>
+                    <option value="">행동 교정 상담</option>
+                    <option value="">자유로운 상담</option>
+                </select>   
+                       
+                <table>
+                    <tr>
+                        <td>이름</td>
+                        <td><input type="text" name="name"></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>비밀번호</td>
+                        <td><input type="password" name="password"></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>제목</td>
+                        <td><input type="text" name="title"></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                        <td><textarea name="content" id="content" cols="30" rows="10"></textarea></td>
+                        <br>
+                        
+                    </tr>
+                    
+                </table>
+                <input type="submit" value="저장">
+                <input type="reset" value="초기화">
+                <br>
+
+                비공개 설정
+                <input type="checkbox"><label for="">비공개</label>
+            </form>
+                
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <a href="/index/main.html">
+                <img src="/img/logo.PNG" alt="Footer Logo">
+            </a>
+        </div>
+        <div class="footer-info">
+            <a href="#register">정보 등록</a>
+        </div>
+        <p>© 2024 병원 정보 시스템. All rights reserved.</p>
+    </footer>
 </body>
 </html>
 
