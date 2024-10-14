@@ -1,0 +1,85 @@
+/* header-footer.css */
+/* 헤더 및 푸터 공통 스타일 */
+
+header {
+    /* 헤더 영역의 배경을 어두운 회색으로 설정하고, 텍스트 색상은 흰색으로 */
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.top-bar {
+    /* 상단 바를 플렉스박스로 설정하여 좌우로 정렬 (로고는 좌측, 유저 메뉴는 우측) */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    /* 로고 이미지의 크기를 가로 100px로 설정 */
+    width: 100px;
+}
+
+.user-menu ul {
+    /* 유저 메뉴 리스트의 기본 점을 없애고, 아이템을 가로로 배치하며, 각 항목 간격을 20px로 설정 */
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.user-menu ul li a {
+    /* 유저 메뉴의 링크 색상을 흰색으로 설정하고, 밑줄을 제거 */
+    color: #fff;
+    text-decoration: none;
+}
+
+.main-nav {
+    /* 네비게이션 바의 배경을 어두운 회색으로 설정하고, 상하 여백을 10px 줌 */
+    background-color: #444;
+    padding: 10px 0;
+}
+
+.main-nav ul {
+    /* 네비게이션 메뉴 리스트를 중앙 정렬하고, 기본 점을 없애며, 여백을 제거 */
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    /* 각 네비게이션 메뉴 항목의 좌우에 15px의 여백을 줌 */
+    margin: 0 15px;
+}
+
+.main-nav ul li a {
+    /* 네비게이션 메뉴 링크의 색상을 흰색으로 설정하고, 밑줄을 제거 */
+    color: #fff;
+    text-decoration: none;
+}
+
+footer {
+    /* 푸터 영역의 배경을 어두운 회색으로 설정하고, 텍스트 색상은 흰색, 중앙 정렬 */
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-logo img {
+    /* 푸터 로고의 크기를 가로 80px로 설정 */
+    width: 80px;
+}
+
+.footer-info {
+    /* 푸터 정보 등록 링크에 10px의 위아래 여백을 추가 */
+    margin: 10px 0;
+}
+
+.footer-info a {
+    /* 푸터의 정보 등록 링크 색상을 흰색으로 설정하고, 밑줄을 제거 */
+    color: #fff;
+    text-decoration: none;
+}

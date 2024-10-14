@@ -1,17 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- 메인페이지 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- css 초기화 -->
-    <link rel="stylesheet" href="/css/reset.css" />
-</head>
+    <title>병원 정보 시스템</title>
+    <!-- 공통 헤더/푸터 CSS -->
+    <link rel="stylesheet" href="/css/header_footer.css">
 
-<body>
+    <!-- 메인 페이지 전용 CSS -->
+    <link rel="stylesheet" href="/css/main.css">
     
+    <!-- 메인 페이지 전용 CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="/index/main.html">
+                    <img src="/img/logo.PNG" alt="Logo">
+                </a>
+            </div>
+            <div class="user-menu">
+                <ul>
+                    <li><a href="#profile">내정보</a></li>
+                    <li><a href="#topic2">Topic 2</a></li>
+                    <li><a href="#signup">회원가입</a></li>
+                    <li><a href="#login">로그인</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#notices">공지사항</a></li>
+                <li><a href="#consulting">전문가상담</a></li>
+                <li><a href="#find-hospital">병원찾기</a></li>
+                <li><a href="#expert-apply">전문가신청</a></li>
+                <li><a href="#drug-info">약정보</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <section class="main-banner">
+            <div class="banner-content">
+                <h1>병원 정보 시스템</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="text-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <a href="/index/main.html">
+                <img src="/img/logo.PNG" alt="Footer Logo">
+            </a>
+        </div>
+        <div class="footer-info">
+            <a href="#register">정보 등록</a>
+        </div>
+        <p>© 2024 병원 정보 시스템. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
 </body>
-    <!-- Scripts -->
-		<script src="/js/main.js"></script>
 </html>
