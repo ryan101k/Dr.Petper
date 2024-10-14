@@ -1,14 +1,17 @@
 h1{
+    padding-top: 50px;
     text-align: center;
     font-size: 30px;
 }
 div#medicineName{
     padding-top: 100px;
-    padding-left: 40%;
+    padding-left: 50%;
+    margin-left: -200px;
 }
 div#medicineName>input{
     width: 400px;
-    height: 30px;
+    height: 40px;
+    font-size: 30px;
 }
 div#medicineInfo{
     text-align: center;
@@ -16,8 +19,7 @@ div#medicineInfo{
 }
 #medicineInfo>p{
     font-size: 20px;
-
-    padding-top: 20px;
+    padding-top: 30px;
 }
 div#nextPage{
     padding-top: 20px;
@@ -25,3 +27,6 @@ div#nextPage{
     font-size: 20px;
 }
 
+#nextPage>a{
+    padding-left: 20px;
+}
