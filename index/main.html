@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>병원 정보 시스템</title>
+    <title>동물 질문 답변 사이트</title>
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="/css/reset.css">
+
     <!-- 공통 헤더/푸터 CSS -->
     <link rel="stylesheet" href="/css/header_footer.css">
 
     <!-- 메인 페이지 전용 CSS -->
     <link rel="stylesheet" href="/css/main.css">
-    
-    <!-- 메인 페이지 전용 CSS -->
-    <link rel="stylesheet" href="/css/reset.css">
 </head>
 <body>
     <!-- Header -->
@@ -22,42 +23,69 @@
                     <img src="/img/logo.PNG" alt="Logo">
                 </a>
             </div>
-            <div class="user-menu">
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="#profile">내정보</a></li>
-                    <li><a href="#topic2">Topic 2</a></li>
-                    <li><a href="#signup">회원가입</a></li>
-                    <li><a href="#login">로그인</a></li>
+                    <li><a href="#home">홈</a></li>
+                    <li><a href="#topics">공지사항</a></li>
+                    <li><a href="#membership">병원찾기</a></li>
+                    <li><a href="#expert-apply">전문가 신청</a></li>
+                    <li><a href="#customer-service">약정보</a></li>
                 </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#search"><img src="/img/search-icon.png" alt="검색"></a>
+                <a href="#profile"><img src="/img/profile-icon.png" alt="내정보"></a>
+                <button class="ask-btn">나도 질문하기</button>
             </div>
         </div>
-        
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#notices">공지사항</a></li>
-                <li><a href="#consulting">전문가상담</a></li>
-                <li><a href="#find-hospital">병원찾기</a></li>
-                <li><a href="#expert-apply">전문가신청</a></li>
-                <li><a href="#drug-info">약정보</a></li>
-            </ul>
-        </nav>
     </header>
-    
+
     <!-- Main Content -->
     <main>
-        <section class="main-banner">
-            <div class="banner-content">
-                <h1>병원 정보 시스템</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <section class="popular-questions">
+            <h2>질문</h2>
+
+            <div class="question-card">
+                <div class="question-info">
+                    <span class="category">상해 보험</span>
+                    <span class="username">xhdtls3617</span>
+                    <span class="date">1일 전</span>
+                </div>
+                <h3>보험 가입 후 바로 해지 시 위약금이 있나요?</h3>
+                <p>3일 전에 기존 보험사에서 전화가 와서 기존 보험에 대한 상태를 체크하고 신규 보험을 가입했습니다. 강하게 화가 나요.. 바로 해약하고 싶습니다. 위약금이 궁금합니다.</p>
+                <div class="response-count">11명의 전문가가 답변했습니다.</div>
             </div>
+
+            <div class="question-card">
+                <div class="question-info">
+                    <span class="category">고민 상담</span>
+                    <span class="username">가금호장미님</span>
+                    <span class="date">1일 전</span>
+                </div>
+                <h3>자립할려는 순간 엄마가 따라온다고 하네요</h3>
+                <p>저 혼자 사는 가정에서 자립을 하려는데 엄마가 갑자기 따라오신다고 해서 고민입니다. 어떻게 해야 할까요?</p>
+                <div class="response-count">22명이 답변했습니다.</div>
+            </div>
+
         </section>
 
-        <section class="info-section">
-            <div class="text-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.</p>
+        <aside class="sidebar">
+            <div class="trending-topics">
+                <h3>요즘 뜨는 토픽</h3>
+                <ul>
+                    <li>생활꿀팁</li>
+                    <li>기타 고민상담</li>
+                    <li>정형외과 의료상담</li>
+                    <li>부동산 경제</li>
+                    <li>임금-급여</li>
+                </ul>
             </div>
-        </section>
+            <div class="signup-promo">
+                <h3>나만의 피드를 만들어보세요.</h3>
+                <p>3초 만에 회원가입하고 맞춤 콘텐츠를 만나보세요!</p>
+                <button>회원가입</button>
+            </div>
+        </aside>
     </main>
 
     <!-- Footer -->
@@ -67,10 +95,7 @@
                 <img src="/img/logo.PNG" alt="Footer Logo">
             </a>
         </div>
-        <div class="footer-info">
-            <a href="#register">정보 등록</a>
-        </div>
-        <p>© 2024 병원 정보 시스템. All rights reserved.</p>
+        <p>© 2024 동물 질문 답변 사이트. All rights reserved.</p>
     </footer>
 
     <script src="/js/main.js"></script>
