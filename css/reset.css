@@ -66,3 +66,46 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+/* 구글 아이콘 불러오기 */
+@font-face {
+	/* 'Material Icons' 폰트를 불러오고, 여러 형식의 폰트 파일을 제공함 */
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	/* IE6-8용 폰트 */
+	src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+	/* 다른 브라우저용 폰트 파일을 로컬 또는 URL로 불러옴 */
+	src: local('Material Icons'),
+	  local('MaterialIcons-Regular'),
+	  url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'), /* 최신 브라우저용 */
+	  url(https://example.com/MaterialIcons-Regular.woff) format('woff'),   /* 대부분의 브라우저용 */
+	  url(https://example.com/MaterialIcons-Regular.ttf) format('truetype'); /* 구형 브라우저용 */
+}
+
+/* 'material-icons' 클래스를 사용하는 요소에 아이콘 폰트 적용 */
+.material-icons {
+	font-family: 'Material Icons'; /* 아이콘 폰트 패밀리 설정 */
+	font-weight: normal; /* 기본 폰트 굵기 */
+	font-style: normal; /* 기본 폰트 스타일 */
+	font-size: 24px;  /* 아이콘 크기 설정 */
+	display: inline-block; /* 아이콘을 인라인 요소로 설정 */
+	line-height: 1; /* 줄 간격 설정 */
+	text-transform: none; /* 대소문자 변환을 하지 않음 */
+	letter-spacing: normal; /* 글자 간격을 기본값으로 설정 */
+	word-wrap: normal; /* 아이콘이 줄 바꿈되지 않도록 설정 */
+	white-space: nowrap; /* 줄 바꿈 방지 */
+	direction: ltr; /* 텍스트 방향을 왼쪽에서 오른쪽으로 설정 */
+  
+	/* WebKit 브라우저 (Chrome, Safari)에서 폰트 스무딩 활성화 */
+	-webkit-font-smoothing: antialiased;
+	/* 텍스트 렌더링을 최적화하여 가독성 향상 (Safari, Chrome) */
+	text-rendering: optimizeLegibility;
+  
+	/* Firefox 브라우저에서 폰트 스무딩 활성화 */
+	-moz-osx-font-smoothing: grayscale;
+  
+	/* IE 브라우저에서 자동 대체 문자 지원 활성화 */
+	font-feature-settings: 'liga';
+}

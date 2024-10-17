@@ -4,27 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>메인 페이지</title>
+    
+    <!-- 구글 아이콘 설정 각종 아이콘 속성 부여 -->
+    <!-- 구글의 Material Icons를 불러와서 아이콘을 사용할 수 있게 설정 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- CSS 초기화 -->
+    <!-- 브라우저 간의 기본 스타일 차이를 없애기 위한 CSS 초기화 파일 -->
     <link rel="stylesheet" href="/css/reset.css">
 
     <!-- 공통 헤더/푸터 CSS -->
+    <!-- 모든 페이지에 동일하게 적용될 헤더와 푸터의 스타일을 정의한 파일 -->
     <link rel="stylesheet" href="/css/header_footer.css">
 
     <!-- 메인 페이지 전용 CSS -->
+    <!-- 메인 페이지의 레이아웃 및 스타일을 정의한 파일 -->
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Header (헤더) -->
+    <!-- 페이지 상단에 위치한 로고, 네비게이션 메뉴, 사용자 메뉴를 포함한 헤더 -->
     <header>
         <div class="top-bar">
+            <!-- 로고 섹션 -->
             <div class="logo">
+                <!-- 메인 페이지로 이동하는 링크와 로고 이미지 -->
                 <a href="/index/main.html">
                     <img src="/img/logo.PNG" alt="Logo">
                 </a>
             </div>
+            <!-- 네비게이션 메뉴 -->
+            <!-- 주요 페이지로 이동할 수 있는 메뉴 항목들을 포함한 네비게이션 -->
             <nav class="main-nav">
                 <ul>
+                    <!-- 네비게이션 항목: 각 항목은 주요 페이지로 이동하는 링크를 포함 -->
                     <li><a href="/index/main.html">홈</a></li>
                     <li><a href="/index/Announcement.html">공지사항</a></li>
                     <li><a href="/index/HospitalStatus.html">병원찾기</a></li>
@@ -32,46 +45,71 @@
                     <li><a href="/index/medication-info.html">약정보</a></li>
                 </ul>
             </nav>
+            <!-- 사용자 메뉴와 검색 기능 -->
+            <!-- 검색 아이콘과 사용자 정보 아이콘을 구글 아이콘으로 구성 -->
             <div class="user-actions">
-                <a href="#search"><img src="/img/search-icon.png" alt="검색"></a>
-                <a href="#profile"><img src="/img/profile-icon.png" alt="내정보"></a>
+                <!-- 검색 아이콘 (구글 Material Icons 사용) -->
+                <a href="#search">
+                    <span class="material-icons">search</span>
+                </a>
+                <!-- 프로필 아이콘 (구글 Material Icons 사용) -->
+                <a href="#profile">
+                    <span class="material-icons">person</span>
+                </a>
+                <!-- 질문하기 버튼 -->
                 <button class="ask-btn" onclick="">나도 질문하기</button>
             </div>
         </div>
     </header>
 
-    <!-- Main Content -->
+    <!-- Main Content (메인 콘텐츠) -->
+    <!-- 메인 페이지의 주요 콘텐츠 영역으로, 인기 질문과 사이드바로 구성 -->
     <main>
+        <!-- 인기 질문 섹션 -->
         <section class="popular-questions">
             <h2>질문</h2>
 
+            <!-- 첫 번째 질문 카드 -->
             <div class="question-card">
+                <!-- 질문에 대한 카테고리, 작성자, 날짜 정보 -->
                 <div class="question-info">
                     <span class="category">상해 보험</span>
                     <span class="username">xhdtls3617</span>
                     <span class="date">1일 전</span>
                 </div>
+                <!-- 질문 제목 -->
                 <h3>보험 가입 후 바로 해지 시 위약금이 있나요?</h3>
+                <!-- 질문 설명 -->
                 <p>3일 전에 기존 보험사에서 전화가 와서 기존 보험에 대한 상태를 체크하고 신규 보험을 가입했습니다. 강하게 화가 나요.. 바로 해약하고 싶습니다. 위약금이 궁금합니다.</p>
+                <!-- 답변 수 표시 -->
                 <div class="response-count">11명의 전문가가 답변했습니다.</div>
             </div>
 
+            <!-- 두 번째 질문 카드 -->
             <div class="question-card">
+                <!-- 질문에 대한 카테고리, 작성자, 날짜 정보 -->
                 <div class="question-info">
                     <span class="category">고민 상담</span>
                     <span class="username">가금호장미님</span>
                     <span class="date">1일 전</span>
                 </div>
+                <!-- 질문 제목 -->
                 <h3>자립할려는 순간 엄마가 따라온다고 하네요</h3>
+                <!-- 질문 설명 -->
                 <p>저 혼자 사는 가정에서 자립을 하려는데 엄마가 갑자기 따라오신다고 해서 고민입니다. 어떻게 해야 할까요?</p>
+                <!-- 답변 수 표시 -->
                 <div class="response-count">22명이 답변했습니다.</div>
             </div>
 
         </section>
 
+        <!-- 사이드바 섹션 -->
+        <!-- 인기 토픽과 회원가입 프로모션을 포함한 사이드바 -->
         <aside class="sidebar">
+            <!-- 인기 토픽 섹션 -->
             <div class="trending-topics">
                 <h3>요즘 뜨는 토픽</h3>
+                <!-- 인기 토픽 리스트 -->
                 <ul>
                     <li>생활꿀팁</li>
                     <li>기타 고민상담</li>
@@ -80,24 +118,32 @@
                     <li>임금-급여</li>
                 </ul>
             </div>
+            <!-- 회원가입 프로모션 섹션 -->
             <div class="signup-promo">
                 <h3>나만의 피드를 만들어보세요.</h3>
+                <!-- 회원가입 안내 설명 -->
                 <p>3초 만에 회원가입하고 맞춤 콘텐츠를 만나보세요!</p>
+                <!-- 회원가입 버튼 -->
                 <button>회원가입</button>
             </div>
         </aside>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (푸터) -->
+    <!-- 페이지 하단에 위치한 푸터 영역으로, 로고와 저작권 정보를 포함 -->
     <footer>
         <div class="footer-logo">
+            <!-- 푸터 로고: 메인 페이지로 이동하는 링크 -->
             <a href="/index/main.html">
                 <img src="/img/logo.PNG" alt="Footer Logo">
             </a>
         </div>
+        <!-- 저작권 정보 표시 -->
         <p>© 2024 동물 질문 답변 사이트. All rights reserved.</p>
     </footer>
 
+    <!-- 자바스크립트 파일 포함 -->
+    <!-- 메인 페이지에서 사용하는 자바스크립트 파일 -->
     <script src="/js/main.js"></script>
 </body>
 </html>

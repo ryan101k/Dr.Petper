@@ -1,4 +1,5 @@
 // 메인페이지 js
+// 2024-10-17
 
 // 병원 정보 로드
 document.addEventListener('DOMContentLoaded', () => {
