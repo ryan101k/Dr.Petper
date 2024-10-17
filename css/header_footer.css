@@ -36,6 +36,7 @@ header {
     z-index: 1000;
     transition: transform 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
     margin: 0 auto;
+    border-radius: 25px; /* 모서리를 둥글게 설정 */
 }
 
 /* 모바일 화면에서 더 작은 내부 여백과 로고 크기 설정 */
@@ -62,58 +63,76 @@ header.scrolled {
 }
 
 /* 새로운 헤더 스타일 */
-/* 새로운 헤더는 추가적인 기능과 버튼을 포함하며, 스크롤 시 등장할 수 있는 스타일을 적용 */
-.new-header {
-    background-color: #fff; /* 배경을 흰색으로 설정 */
+/* 새로운 헤더는 스크롤 시 기존 헤더 대신 나타나며,
+   배경색은 흰색, 텍스트 색상은 짙은 회색(#333)으로 설정됩니다.
+   패딩은 5px 상하, 10px 좌우로 설정하여 헤더의 내부 여백을 줄이고,
+   고정된 위치에서 상단에 나타나도록 합니다. */
+   .new-header {
+    border-radius: 25px; /* 모서리를 둥글게 설정 */
+    background-color: #fff; /* 헤더 배경색을 흰색으로 설정 */
     color: #333; /* 텍스트 색상을 짙은 회색으로 설정 */
-    padding: 5px 10px; /* 내부 여백을 줄여서 세로 길이 줄이기 */
-    position: fixed; /* 고정된 위치 */
-    top: 0; /* 화면 상단에 위치 */
-    left: 0;
-    right: 0;
-    z-index: 1001; /* 기존 헤더보다 위에 나타나도록 설정 */
-    display: flex; /* 버튼이 가로로 정렬되도록 설정 */
-    justify-content: space-between; /* 좌측과 우측에 요소 배치 */
-    align-items: center; /* 수직 중앙 정렬 */
-    height: 50px; /* 헤더의 세로 길이를 줄여서 얇게 설정 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 살짝 그림자 추가 */
+    padding: 5px 10px; /* 상하 5px, 좌우 10px 패딩으로 내부 여백을 설정 */
+    position: fixed; /* 고정된 위치에서 스크롤 시에도 따라오도록 설정 */
+    top: 0; /* 화면 상단에 고정 */
+    left: 0; /* 화면 왼쪽에 고정 */
+    right: 0; /* 화면 오른쪽에 고정 */
+    z-index: 1001; /* 기존 헤더보다 위에 나타나도록 z-index 설정 */
+    display: flex; /* 요소들을 가로로 정렬 */
+    justify-content: space-between; /* 왼쪽과 오른쪽에 각각 요소 배치 */
+    align-items: center; /* 수직으로 중앙에 배치 */
+    height: 50px; /* 헤더의 세로 높이를 50px로 설정하여 얇게 만듦 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 아래쪽에 그림자 효과 추가 */
+    transform: translateY(-100%); /* 기본적으로 화면 위쪽으로 숨김 */
+    transition: transform 0.7s ease; /* 스크롤 시 부드러운 전환 효과 적용 */
+    max-width: 1200px; /* 헤더의 최대 너비를 1200px로 설정 */
+    margin: 0 auto; /* 중앙 정렬을 위해 자동 여백 설정 */
 }
 
-/* 새로운 헤더 안에 있는 홈 버튼 스타일 */
+/* 홈 버튼 스타일 */
+/* 홈 버튼은 파란색 배경에 흰색 텍스트로 설정되며,
+   둥근 모서리와 클릭 시 커서가 변경됩니다. */
 .new-header .home-btn {
-    background-color: #007bff; /* 버튼 배경을 파란색으로 설정 */
+    background-color: #007bff; /* 버튼 배경을 파란색(#007bff)으로 설정 */
     color: #fff; /* 텍스트 색상을 흰색으로 설정 */
-    border: none; /* 테두리 제거 */
-    padding: 5px 15px; /* 버튼 내부 여백 줄이기 */
-    border-radius: 20px; /* 둥근 모서리 설정 */
-    font-size: 1em; /* 글씨 크기 설정 */
-    cursor: pointer; /* 클릭할 수 있는 커서로 설정 */
-    margin-left: 10px; /* 왼쪽에 약간의 여백 추가 */
-    transition: background-color 0.3s ease, color 0.3s ease; /* 부드러운 색상 전환 */
+    border: none; /* 버튼 테두리 제거 */
+    padding: 5px 15px; /* 버튼 내부 여백을 상하 5px, 좌우 15px로 설정 */
+    border-radius: 20px; /* 버튼의 모서리를 둥글게 설정 (20px) */
+    font-size: 1em; /* 글씨 크기를 1em으로 설정 */
+    cursor: pointer; /* 마우스 커서가 버튼 위에 있을 때 클릭 모양으로 변경 */
+    margin-left: 10px; /* 버튼 왼쪽에 10px 간격 추가 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 배경과 텍스트 색상 전환을 부드럽게 설정 */
 }
 
-/* 홈 버튼에 마우스를 올렸을 때 효과 */
+/* 홈 버튼에 마우스를 올렸을 때 색상 효과 */
+/* 버튼에 마우스를 올리면 배경색이 진한 파란색으로 변경되고,
+   텍스트는 흰색으로 유지됩니다. */
 .new-header .home-btn:hover {
-    background-color: #0056b3; /* 배경을 진한 파란색으로 변경 */
-    color: #fff; /* 텍스트를 흰색으로 변경 */
-}
-
-/* 새로운 헤더 안의 사용자 메뉴 스타일 (오른쪽에 배치) */
-.new-user-actions {
-    display: flex; /* 가로 정렬 */
-    gap: 20px; /* 아이콘 사이에 간격 추가 */
-    margin-right: 15px; /* 오른쪽 여백 */
+    background-color: #0056b3; /* 배경을 진한 파란색(#0056b3)으로 변경 */
+    color: #fff; /* 텍스트는 흰색으로 유지 */
 }
 
 /* 사용자 메뉴 아이콘 스타일 */
-.new-user-actions a {
-    color: #333; /* 아이콘 색상을 짙은 회색으로 설정 */
-    text-decoration: none; /* 밑줄 제거 */
-    font-size: 1.8em; /* 아이콘 크기 설정 */
+/* 사용자 메뉴의 아이콘들은 오른쪽에 배치되며,
+   각 아이콘 간의 간격을 유지하면서 크기와 색상을 설정합니다. */
+.new-user-actions {
+    display: flex; /* 아이콘들을 가로로 정렬 */
+    gap: 20px; /* 각 아이콘 사이에 20px 간격 추가 */
+    margin-right: 15px; /* 오른쪽에 15px 여백 추가 */
 }
 
+/* 사용자 메뉴 아이콘 스타일 */
+/* 아이콘의 기본 크기와 색상을 설정하고,
+   마우스를 올리면 색상이 파란색으로 변경됩니다. */
+.new-user-actions a {
+    color: #333; /* 기본 아이콘 색상을 짙은 회색(#333)으로 설정 */
+    text-decoration: none; /* 밑줄을 제거 */
+    font-size: 1.8em; /* 아이콘 크기를 1.8em으로 설정 */
+}
+
+/* 사용자 메뉴 아이콘에 마우스를 올렸을 때 색상 변화 */
+/* 마우스를 아이콘에 올리면 색상이 파란색으로 변경됩니다. */
 .new-user-actions a:hover {
-    color: #007bff; /* 호버 시 아이콘 색상 파란색으로 변경 */
+    color: #007bff; /* 호버 시 파란색(#007bff)으로 변경 */
 }
 
 /* 상단 바 스타일: 로고와 유저 메뉴를 좌우로 정렬 */

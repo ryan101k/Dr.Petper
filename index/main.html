@@ -55,41 +55,103 @@
         </div>
     </header>
 
+    <!-- 새로운 헤더 -->
+    <div class="new-header">
+        <button class="home-btn">맨위로</button>
+        <div class="new-user-actions">
+            <a href="#search">
+                <i class="fas fa-search"></i>
+            </a>
+            <a href="#profile">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </div>
+
     <!-- Main Content (메인 콘텐츠) -->
     <main>
         <!-- 인기 질문 섹션 -->
         <section class="popular-questions">
-            <h2>질문</h2>
-
             <!-- 첫 번째 질문 카드 -->
             <div class="question-card">
                 <div class="question-info">
-                    <span class="category">상해 보험</span>
+                    <span class="category">반려동물 건강</span>
                     <span class="username">xhdtls3617</span>
                     <span class="date">1일 전</span>
                 </div>
-                <h3>보험 가입 후 바로 해지 시 위약금이 있나요?</h3>
-                <p>3일 전에 기존 보험사에서 전화가 와서 기존 보험에 대한 상태를 체크하고 신규 보험을 가입했습니다. 강하게 화가 나요.. 바로 해약하고 싶습니다. 위약금이 궁금합니다.</p>
+                <h3>강아지 예방접종 후 부작용이 있을까요?</h3>
+                <p>강아지에게 예방접종을 했는데, 접종 후 계속 피곤해하고 밥을 잘 안 먹습니다. 괜찮은 걸까요?</p>
                 <div class="response-count">11명의 전문가가 답변했습니다.</div>
             </div>
 
             <!-- 두 번째 질문 카드 -->
             <div class="question-card">
                 <div class="question-info">
-                    <span class="category">고민 상담</span>
+                    <span class="category">반려동물 행동</span>
                     <span class="username">가금호장미님</span>
                     <span class="date">1일 전</span>
                 </div>
-                <h3>자립할려는 순간 엄마가 따라온다고 하네요</h3>
-                <p>저 혼자 사는 가정에서 자립을 하려는데 엄마가 갑자기 따라오신다고 해서 고민입니다. 어떻게 해야 할까요?</p>
+                <h3>고양이가 갑자기 물건을 물어뜯어요</h3>
+                <p>평소에는 얌전했던 고양이가 최근 갑자기 물건을 물어뜯기 시작했습니다. 왜 그럴까요?</p>
                 <div class="response-count">22명이 답변했습니다.</div>
             </div>
 
+            <!-- 세 번째 질문 카드 -->
+            <div class="question-card">
+                <div class="question-info">
+                    <span class="category">반려동물 보험</span>
+                    <span class="username">alex_korea</span>
+                    <span class="date">3일 전</span>
+                </div>
+                <h3>반려동물 보험 청구는 어떻게 하나요?</h3>
+                <p>반려동물이 다쳐서 보험금을 청구하려고 하는데, 절차가 궁금합니다. 복잡한가요?</p>
+                <div class="response-count">8명의 전문가가 답변했습니다.</div>
+            </div>
+
+            <!-- 네 번째 질문 카드 -->
+            <div class="question-card">
+                <div class="question-info">
+                    <span class="category">반려동물 사고</span>
+                    <span class="username">car_lover99</span>
+                    <span class="date">4일 전</span>
+                </div>
+                <h3>반려동물이 다쳤을 때 보험 처리는 얼마나 걸리나요?</h3>
+                <p>사고로 반려동물이 다쳤는데, 보험 처리가 오래 걸릴지 궁금합니다. 빠르게 처리하는 방법이 있을까요?</p>
+                <div class="response-count">12명의 전문가가 답변했습니다.</div>
+            </div>
+
+            <!-- 다섯 번째 질문 카드 -->
+            <div class="question-card">
+                <div class="question-info">
+                    <span class="category">반려동물 건강</span>
+                    <span class="username">firefighter</span>
+                    <span class="date">5일 전</span>
+                </div>
+                <h3>반려동물 의료비는 어디까지 보상되나요?</h3>
+                <p>반려동물이 병원에 갔을 때, 보험으로 어느 정도까지 보상받을 수 있는지 알고 싶어요. 보상 항목이 어떻게 되나요?</p>
+                <div class="response-count">15명의 전문가가 답변했습니다.</div>
+            </div>
         </section>
 
         <!-- 사이드바 섹션 -->
         <aside class="sidebar">
-            <div class="trending-topics">
+            <!-- 로그인 섹션 -->
+            <div class="sidebar-section mini-login">
+                <h2>Dr.Petper를  편리하게 이용하세요</h2>
+                
+                <!-- 큰 로그인 버튼 -->
+                <button class="login-btn">로그인</button>
+                
+                <!-- 작은 버튼들 -->
+                <div class="mini-buttons">
+                    <button class="mini-btn">회원가입</button>
+                    <button class="mini-btn">아이디 찾기</button>
+                    <button class="mini-btn">비밀번호 찾기</button>
+                </div>
+            </div>
+
+            <!-- 요즘 뜨는 토픽 섹션 -->
+            <div class="sidebar-section trending-topics">
                 <h3>요즘 뜨는 토픽</h3>
                 <ul>
                     <li>생활꿀팁</li>
@@ -99,13 +161,16 @@
                     <li>임금-급여</li>
                 </ul>
             </div>
-            <div class="signup-promo">
+
+            <!-- 회원가입 프로모션 섹션 -->
+            <div class="sidebar-section signup-promo">
                 <h3>나만의 피드를 만들어보세요.</h3>
                 <p>3초 만에 회원가입하고 맞춤 콘텐츠를 만나보세요!</p>
                 <button>회원가입</button>
             </div>
         </aside>
     </main>
+
 
     <!-- Footer (푸터) -->
     <footer>
@@ -131,19 +196,20 @@
                 <a href="https://facebook.com">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://twitter.com">
+                <a href="https://x.com/elonmusk">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="https://instagram.com">
+                <a href="https://www.instagram.com/cristiano/">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
         </div>
 
-        <p class="footer-copyright">© 2024 동물 질문 답변 사이트. All rights reserved.</p>
+        <p class="footer-copyright">© 2024 Dr.Petper. All rights reserved.</p>
     </footer>
 
     <!-- 자바스크립트 파일 포함 -->
+    <script src="/js/head.js"></script>
     <script src="/js/main.js"></script>
 </body>
 </html>
