@@ -38,14 +38,17 @@
 .anno_main{ /* 테이블포함 메인부분 */
     padding-top: 4%;
     margin: 0 auto;
+    
 }
 
 /* 메인 테이블 */
 .anno_main_table{
+    height: 130px;
     margin: 0 auto;
     width: 860PX;
     border: 1px solid gray;
     text-align: center;
+    
 }
 
 /* 테이블 행부분 */
