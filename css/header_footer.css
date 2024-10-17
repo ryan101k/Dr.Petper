@@ -9,10 +9,8 @@
    display: flex는 Flexbox 레이아웃을 사용하고, flex-direction: column을 사용해
    내용물이 위에서 아래로 나열되도록 합니다. */
    html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
+    height: 100%;   /*전체 높이 100%*/
+    display: flex;  
     flex-direction: column; /* 페이지의 메인과 푸터가 세로로 배치되도록 설정 */
 }
 
@@ -21,7 +19,6 @@
    배경색을 흰색으로 설정하고, 아래쪽에 얇은 회색 테두리를 추가합니다.
    패딩으로 내부 여백을 줄이고, box-shadow로 살짝 그림자 효과를 주어 
    헤더가 부드럽게 떠 있는 느낌을 줍니다. */
-/* 헤더의 세로 길이를 줄이고, 모바일에서도 적절하게 보이도록 설정 */
 header {
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
@@ -39,21 +36,6 @@ header {
     border-radius: 25px; /* 모서리를 둥글게 설정 */
 }
 
-/* 모바일 화면에서 더 작은 내부 여백과 로고 크기 설정 */
-@media (max-width: 768px) {
-    header {
-        padding: 5px 8px; /* 모바일에서 헤더 내부 여백 줄이기 */
-    }
-
-    .logo img {
-        width: 80px; /* 모바일에서 로고 크기를 줄임 */
-    }
-
-    .user-actions .material-icons {
-        font-size: 24px; /* 모바일에서 아이콘 크기 줄이기 */
-        margin: 0 10px; /* 모바일에서 아이콘 간 간격 줄이기 */
-    }
-}
 
 /* 스크롤 시 헤더 높이 줄이기 */
 header.scrolled {
@@ -155,7 +137,6 @@ header.scrolled {
 
 /* 유저 메뉴 리스트 스타일 */
 .user-menu ul {
-    list-style-type: none; /* 기본 리스트 스타일(점)을 제거 */
     display: flex; /* 유저 메뉴 항목을 가로로 나열 */
     gap: 20px; /* 각 항목 간 간격을 20px로 설정 */
     margin: 0;
@@ -184,9 +165,6 @@ header.scrolled {
 .main-nav ul {
     display: flex; /* 메뉴 항목들을 가로로 배치 */
     justify-content: center; /* 항목을 중앙에 정렬 */
-    list-style-type: none; /* 기본 리스트 스타일(점)을 제거 */
-    margin: 0;
-    padding: 0;
     gap: 20px; /* 각 메뉴 항목 간 간격을 20px로 설정 */
 }
 
@@ -197,7 +175,7 @@ header.scrolled {
     font-size: 1.1em; /* 글씨 크기 설정 */
     transition: color 0.3s ease; /* 색상이 부드럽게 변경되도록 설정 */
 }
-
+/* 헤더 네비게이션 버튼 호버시 기능*/
 .main-nav ul li a:hover {
     color: #0056b3; /* 더 진한 파란색으로 변경 */
 }
