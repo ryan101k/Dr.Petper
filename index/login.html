@@ -8,47 +8,58 @@
     <!-- CSS 초기화 -->
     <link rel="stylesheet" href="/css/reset.css">
 
-    <!-- 공통 헤더/푸터 CSS -->
-    <link rel="stylesheet" href="/css/header_footer.css">
-
+    <!-- 로그인 페이지 CSS -->
+    <link rel="stylesheet" href="/css/login.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="top-bar">
-            <div class="logo">
-                <a href="/index/main.html">
-                    <img src="/img/logo.PNG" alt="Logo">
-                </a>
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="/index/main.html">홈</a></li>
-                    <li><a href="/index/Announcement.html">공지사항</a></li>
-                    <li><a href="/index/HospitalStatus.html">병원찾기</a></li>
-                    <li><a href="/index/ExpertApplication.html">전문가 신청</a></li>
-                    <li><a href="/index/medication-info.html">약정보</a></li>
-                </ul>
-            </nav>
-            <div class="user-actions">
-                <a href="#search"><img src="/img/search-icon.png" alt="검색"></a>
-                <a href="#profile"><img src="/img/profile-icon.png" alt="내정보"></a>
-                <button class="ask-btn" onclick="">나도 질문하기</button>
-            </div>
-        </div>
-    </header>
+    <!-- 중앙에 로고 -->
+    <div class="logo">
+        <a href="/index/main.html">
+            <img src="/img/logo.PNG" alt="Logo" class="logo-img">
+        </a>
+    </div>
 
+    <!-- 로그인 폼 컨테이너 -->
+    <div class="login-container">
+        <form class="login-form" id="loginForm">
+            <!-- 아이디/전화번호 입력 -->
+            <div class="input-box">
+                <label for="id">아이디 또는 전화번호</label>
+                <input type="text" id="id" name="id" required>
+            </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-logo">
-            <a href="/index/main.html">
-                <img src="/img/logo.PNG" alt="Footer Logo">
-            </a>
-        </div>
-        <p>© 2024 동물 질문 답변 사이트. All rights reserved.</p>
+            <!-- 비밀번호 입력 -->
+            <div class="input-box">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <!-- 로그인 상태 유지 -->
+            <div class="options">
+                <label>
+                    <input type="checkbox" name="keepLoggedIn">
+                    로그인 상태 유지
+                </label>
+                <a href="#" class="ip-protect">IP보안 <span class="on">ON</span></a>
+            </div>
+
+            <!-- 로그인 버튼 -->
+            <button type="submit" class="login-btn">로그인</button>
+
+            <!-- 링크들 -->
+            <div class="extra-links">
+                <a href="/index/find-password.html">비밀번호 찾기</a>
+                <a href="/index/find-id.html">아이디 찾기</a>
+                <a href="/index/signup.html">회원가입</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <p>Copyright © Dr.Petper. All rights reserved.</p>
     </footer>
 
-    <script src="/js/main.js"></script>
+    <script src="/js/login.js"></script>
 </body>
 </html>
