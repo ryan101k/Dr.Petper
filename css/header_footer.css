@@ -220,6 +220,27 @@ header.scrolled {
     color: #007bff; /* 호버 시 파란색으로 변경 */
 }
 
+/* "나도 질문하기" 버튼 스타일 */
+/* 버튼의 배경색을 파란색(#007bff), 텍스트 색상을 흰색으로 설정 */
+/* 버튼을 둥글게(30px) 만들고 그림자와 마우스를 올렸을 때 부드럽게 변하는 효과 추가 */
+.ask-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* "나도 질문하기" 버튼에 마우스를 올렸을 때 */
+/* 배경색을 더 진한 파란색(#0056b3)으로 바꾸고 그림자를 진하게 설정 */
+.ask-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
 
 /* 메인 콘텐츠 스타일 */
 main {
