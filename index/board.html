@@ -42,12 +42,11 @@
                 <li><a href="#drug-info">약정보</a></li>
             </ul>
         </nav>
+        <h1>문의 글 남기기</h1>
     </header>
 
     <div class="board">
-        <h1>문의 글 남기기</h1>
-                
-            <form action="">
+            <form id="question">
                 질문유형
                 <select name="" id="">
                     <option value="">질문유형 선택</option>
@@ -55,23 +54,30 @@
                     <option value="">행동 교정 상담</option>
                     <option value="">자유로운 상담</option>
                 </select>   
+                <br>
+                
                        
-                <table>
+                
                     <tr>
                         <td>이름</td>
                         <td><input type="text" name="name"></td>
                         
                     </tr>
+                    <br>
+
                     <tr>
                         <td>비밀번호</td>
                         <td><input type="password" name="password"></td>
                         
                     </tr>
+                    <br>
                     <tr>
                         <td>제목</td>
                         <td><input type="text" name="title"></td>
                                 
                     </tr>
+                    <br>
+
                     <tr>
                         <td>내용</td>
                         <td><textarea name="content" id="content" cols="30" rows="10"></textarea></td>
@@ -79,7 +85,7 @@
                         
                     </tr>
                     
-                </table>
+               
                 <input type="submit" value="저장">
                 <input type="reset" value="초기화">
                 <br>
