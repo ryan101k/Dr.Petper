@@ -1,8 +1,4 @@
-h1 {
-    text-align: center;
-    margin-bottom: 10px;
+.header {
+    margin-left: 20px;
 }
 
-form {
-    text-align: center;
-}
