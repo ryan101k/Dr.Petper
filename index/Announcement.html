@@ -3,6 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,10 +18,11 @@
     <link rel="stylesheet" href="/css/Anno_header_footer.css">
 
     <!-- 공지사항 css -->
-     <link rel="stylesheet" href="/css/Announcement.css">
+    <link rel="stylesheet" href="/css/Announcement.css">
 
 
 </head>
+
 <body>
     <!-- Header (헤더) -->
     <header>
@@ -50,7 +52,7 @@
                     <i class="fas fa-search"></i>
                 </a>
                 <!-- 프로필 아이콘 -->
-                 <!-- 임시링크 -->
+                <!-- 임시링크 -->
                 <a href="/index/board.html">
                     <i class="fas fa-user"></i>
                 </a>
@@ -73,56 +75,48 @@
         </div>
     </div>
     <div class="anno_wrap">
-        
+
         <div class="anno_top">
 
-<main>      
-    <div class="anno_wrap">
-        <div class="anno_Bn">
-                <a class="anno_title" onclick="window.location.reload()" style="cursor: pointer;" >
-                    <i class="fa-solid fa-bullhorn fa-lg"    >&nbsp;&nbsp;Dr.Petper 공지사항</i>
-                    <p class="anno_title2">
-                        안녕하세요 닥터펫퍼 공지사항입니다.<br><br>
-                        닥터펫퍼의 새로운 정보를 확인해 보세요.
-                    </p>
-                </a>
-        </div>
+            <main>
+                <div class="anno_wrap">
+                    <div class="anno_Bn">
+                        <a class="anno_title" onclick="window.location.reload()" style="cursor: pointer;"><!--배너 클릭시 새로고침-->
+                            <i class="fa-solid fa-bullhorn fa-lg">&nbsp;&nbsp;Dr.Petper 공지사항</i><!--공지사항배너텍스트-->
+                            <p class="anno_title2">
+                                안녕하세요 닥터펫퍼 공지사항입니다.<br><br>
+                                닥터펫퍼의 새로운 정보를 확인해 보세요.
+                            </p>
+                        </a>
+                    </div>
 
-      
-        <table>
-            <tr>
-                <th>No</th>
-                <th>Title</th>
-                <th>Date</th>
-                <th>View</th>
-            </tr>
+                    <div class="anno_main">
+                        <table class="anno_main_table"><!-- 공지사항게시판 테이블-->
+                            <tr>
+                                <th>No</th>
+                                <th>Title</th>
+                                <th>Date</th>
+                                <th>View</th>
+                            </tr>
 
-            <tr>
-                <td>1</td>
-                <td>공지안내</td>
-                <td>2024-10-10</td>
-                <td>200</td>
-            </tr>
-        </table>   
-    
-    </div>
-
+                            <tr>
+                                <td>1</td>
+                                <td>공지안내</td>
+                                <td>2024-10-10</td>
+                                <td>200</td>
+                            </tr>
+                        </table>
+                    </div>
 
 
-
-</main>             
-                
-
-
-
-            
-
-        </div>
+                </div>
 
 
 
 
-    </div>
+
+
+            </main>
 
 
 
@@ -138,47 +132,48 @@
 
 
 
-    <!-- Footer (푸터) -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-logo">
-                <a href="/index/main.html">
-                    <img src="/img/logo.PNG" alt="Footer Logo">
-                </a>
-            </div>
+            <!-- Footer (푸터) -->
+            <footer>
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <a href="/index/main.html">
+                            <img src="/img/logo.PNG" alt="Footer Logo">
+                        </a>
+                    </div>
 
-            <!-- 주요 링크 -->
-            <div class="footer-links">
-                <ul>
-                    <li><a href="/index/about.html">회사 소개</a></li>
-                    <li><a href="/index/contact.html">문의하기</a></li>
-                    <li><a href="/index/privacy.html">개인정보 처리방침</a></li>
-                    <li><a href="/index/terms.html">이용약관</a></li>
-                </ul>
-            </div>
+                    <!-- 주요 링크 -->
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="/index/about.html">회사 소개</a></li>
+                            <li><a href="/index/contact.html">문의하기</a></li>
+                            <li><a href="/index/privacy.html">개인정보 처리방침</a></li>
+                            <li><a href="/index/terms.html">이용약관</a></li>
+                        </ul>
+                    </div>
 
-            <!-- 소셜 미디어 링크 -->
-            <div class="footer-social">
-                <a href="https://facebook.com">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://x.com/elonmusk">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/cristiano/">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-        </div>
+                    <!-- 소셜 미디어 링크 -->
+                    <div class="footer-social">
+                        <a href="https://facebook.com">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://x.com/elonmusk">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/cristiano/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
 
-        <p class="footer-copyright">© 2024 Dr.Petper. All rights reserved.</p>
-    </footer>
+                <p class="footer-copyright">© 2024 Dr.Petper. All rights reserved.</p>
+            </footer>
 
-    <!-- 자바스크립트 파일 포함 -->
-    <script src="/js/head.js"></script>
-    <script src="/js/main.js"></script>
+            <!-- 자바스크립트 파일 포함 -->
+            <script src="/js/head.js"></script>
+            <script src="/js/main.js"></script>
 
 
-    
+
 </body>
+
 </html>
