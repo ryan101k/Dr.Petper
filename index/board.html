@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="/css/reset.css">
         <!-- 공통 헤더/푸터 CSS -->
         <link rel="stylesheet" href="/css/header_footer.css">
+        <!-- board CSS -->
+         <link rel="stylesheet" href="/css/board.css">
     </head>
 <body>
       <!-- Header (헤더) -->
@@ -62,14 +64,22 @@
         </div>
     </div>
 
-    <main>
-        <div class="header">
-            <span><i class="fa-solid fa-user-doctor fa-lg"></i></span><br>
-                <h1>질문하기</h1>
+    <main> <!-- 메인 -->
+        <div class="header"> <!-- 헤더 -->
+            <span><i class="fa-solid fa-user-doctor-message"></i><h1>질문하기</h1></span><br>      
         </div>
         <br>
-        <div class="board">
-            <form id="question">
+        <div class="board"> <!-- div 보드 -->
+            <form id="question"> <!-- 폼 question -->
+                
+                <!-- 이름 -->
+                <input type="text" name="title" maxlength="45" placeholder="이름을 입력해주세요." class="css-ijlspf ek6vnq521" value="">
+                <br><br>
+                 
+                <!-- 제목 -->
+                <input type="text" name="title" maxlength="45" placeholder="제목을 입력해주세요." class="css-ijlspf ek6vnq521" value="">
+                <br><br>
+
                 질문유형
                 <select name="" id="">
                     <option value="">질문유형 선택</option>
@@ -77,35 +87,19 @@
                     <option value="">행동 교정 상담</option>
                 </select>   
                 <br><br>
-                    <span>이름</span>
-                    <input type="text" name="name">
-                    <br><br>
 
-                    <span>비밀번호</span>
-                    <td><input type="password" name="password"></td>
-                    <br><br>
-                 
-                    <span>제목</span>
-                    <td><input type="text" name="title"></td>
-                    <br><br>
-
-                    <span>내용</span>
-                    <td><textarea name="content" id="content" cols="30" rows="10"></textarea></td>
-                    <br><br>
+                <!-- 내용 -->
+                <textarea name="content" maxlength="5000" placeholder="상담 내용을 상세히 입력해 주세요." class="css-1vtg556 ek6vnq523" style="height: 64px;" rows="2"></textarea>
+                <br><br>
         
-                <input type="submit" value="저장">
+                <input type="submit" value="등록">
                 <input type="reset" value="초기화">
                 <br><br>
 
-                비공개 설정
-                <input type="checkbox" id="h1" name="notpublic"><label for="h1">비공개</label>
-            </form>
-                
-
-    </div>
-
-    </main>
-
+                <input type="checkbox" id="h1" name="notpublic"><label for="h1">비공개 설정</label> <!-- 비공개 설정 -->
+            </form> <!-- 폼 question -->
+        </div> <!-- div 보드 끝 -->
+    </main> <!-- 메인 끝 -->
 
     <!-- Footer (푸터) -->
     <footer>
