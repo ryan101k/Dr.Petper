@@ -1,9 +1,14 @@
 /* header_footer.css */
-/* 2024-10-17 박국령 */
-/* 전체 적용스타일 여기서 html body및 header body 스타일이 설정됨 */
+/* 2024-10-17 박국령 수정 */
+/* 이 CSS 파일은 웹 페이지의 전체적인 구조를 설정하고, 
+   헤더(header), 메인(main), 푸터(footer)의 스타일을 정의합니다 */
 
-/* 전체 높이를 차지하도록 html과 body에 설정하여 페이지가 화면에 꽉 차도록 설정 */
-html, body {
+/* html과 body 스타일 설정 */
+/* 페이지 전체 높이를 차지하도록 html과 body의 높이를 100%로 설정합니다.
+   margin과 padding을 0으로 설정하여 기본 여백을 모두 제거합니다.
+   display: flex는 Flexbox 레이아웃을 사용하고, flex-direction: column을 사용해
+   내용물이 위에서 아래로 나열되도록 합니다. */
+   html, body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -11,57 +16,139 @@ html, body {
     flex-direction: column; /* 페이지의 메인과 푸터가 세로로 배치되도록 설정 */
 }
 
-/* 메인 콘텐츠가 푸터 위에 있도록 설정 (다른 페이지에서도 적용됨) */
-main {
-    flex: 1; /* 메인이 남는 공간을 차지하도록 설정 */
-    padding: 0 20px; /* 양옆에 20px 패딩을 추가하여 공백을 확보 */
+/* 헤더 스타일 수정 */
+/* 헤더는 페이지 상단에 고정되고, 스크롤을 해도 항상 상단에 머물도록 합니다.
+   배경색을 흰색으로 설정하고, 아래쪽에 얇은 회색 테두리를 추가합니다.
+   패딩으로 내부 여백을 줄이고, box-shadow로 살짝 그림자 효과를 주어 
+   헤더가 부드럽게 떠 있는 느낌을 줍니다. */
+/* 헤더의 세로 길이를 줄이고, 모바일에서도 적절하게 보이도록 설정 */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 5px 10px; /* 상하좌우로 5px, 10px의 내부 여백 설정 (세로 길이 줄이기) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 1200px;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
+    margin: 0 auto;
 }
 
-/* 헤더 스타일 설정 */
-header {
-    background-color: #fff; /* 헤더 배경을 흰색으로 설정 */
-    border-bottom: 1px solid #e0e0e0; /* 헤더 하단에 회색 테두리 추가 */
-    padding: 15px 20px; /* 내부 여백 설정 */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 살짝 그림자를 추가해 부드러운 효과 */
-    position: sticky; /* 헤더가 상단에 고정되도록 설정 */
-    top: 0; /* 스크롤 시에도 헤더가 상단에 위치 */
-    z-index: 1000; /* 다른 요소들 위에 위치하도록 z-index 설정 */
-    margin-bottom: 10px; /* 헤더 아래에 약간의 공간 추가 */
+/* 모바일 화면에서 더 작은 내부 여백과 로고 크기 설정 */
+@media (max-width: 768px) {
+    header {
+        padding: 5px 8px; /* 모바일에서 헤더 내부 여백 줄이기 */
+    }
+
+    .logo img {
+        width: 80px; /* 모바일에서 로고 크기를 줄임 */
+    }
+
+    .user-actions .material-icons {
+        font-size: 24px; /* 모바일에서 아이콘 크기 줄이기 */
+        margin: 0 10px; /* 모바일에서 아이콘 간 간격 줄이기 */
+    }
+}
+
+/* 스크롤 시 헤더 높이 줄이기 */
+header.scrolled {
+    transform: translateY(-100px); /* 스크롤 시 헤더가 위로 사라짐 */
+    padding: 5px 15px; /* 스크롤 시 내부 여백 유지 */
+    background-color: rgba(255, 255, 255, 0.9); /* 배경을 약간 투명하게 변경 */
+}
+
+/* 새로운 헤더 스타일 */
+/* 새로운 헤더는 추가적인 기능과 버튼을 포함하며, 스크롤 시 등장할 수 있는 스타일을 적용 */
+.new-header {
+    background-color: #fff; /* 배경을 흰색으로 설정 */
+    color: #333; /* 텍스트 색상을 짙은 회색으로 설정 */
+    padding: 5px 10px; /* 내부 여백을 줄여서 세로 길이 줄이기 */
+    position: fixed; /* 고정된 위치 */
+    top: 0; /* 화면 상단에 위치 */
+    left: 0;
+    right: 0;
+    z-index: 1001; /* 기존 헤더보다 위에 나타나도록 설정 */
+    display: flex; /* 버튼이 가로로 정렬되도록 설정 */
+    justify-content: space-between; /* 좌측과 우측에 요소 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+    height: 50px; /* 헤더의 세로 길이를 줄여서 얇게 설정 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 살짝 그림자 추가 */
+}
+
+/* 새로운 헤더 안에 있는 홈 버튼 스타일 */
+.new-header .home-btn {
+    background-color: #007bff; /* 버튼 배경을 파란색으로 설정 */
+    color: #fff; /* 텍스트 색상을 흰색으로 설정 */
+    border: none; /* 테두리 제거 */
+    padding: 5px 15px; /* 버튼 내부 여백 줄이기 */
+    border-radius: 20px; /* 둥근 모서리 설정 */
+    font-size: 1em; /* 글씨 크기 설정 */
+    cursor: pointer; /* 클릭할 수 있는 커서로 설정 */
+    margin-left: 10px; /* 왼쪽에 약간의 여백 추가 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 부드러운 색상 전환 */
+}
+
+/* 홈 버튼에 마우스를 올렸을 때 효과 */
+.new-header .home-btn:hover {
+    background-color: #0056b3; /* 배경을 진한 파란색으로 변경 */
+    color: #fff; /* 텍스트를 흰색으로 변경 */
+}
+
+/* 새로운 헤더 안의 사용자 메뉴 스타일 (오른쪽에 배치) */
+.new-user-actions {
+    display: flex; /* 가로 정렬 */
+    gap: 20px; /* 아이콘 사이에 간격 추가 */
+    margin-right: 15px; /* 오른쪽 여백 */
+}
+
+/* 사용자 메뉴 아이콘 스타일 */
+.new-user-actions a {
+    color: #333; /* 아이콘 색상을 짙은 회색으로 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-size: 1.8em; /* 아이콘 크기 설정 */
+}
+
+.new-user-actions a:hover {
+    color: #007bff; /* 호버 시 아이콘 색상 파란색으로 변경 */
 }
 
 /* 상단 바 스타일: 로고와 유저 메뉴를 좌우로 정렬 */
 .top-bar {
     display: flex;
-    justify-content: space-between; /* 로고는 좌측, 유저 메뉴는 우측으로 배치 */
-    align-items: center; /* 수직 가운데 정렬 */
-    padding: 10px 0; /* 상단 바의 상하 패딩 설정 */
+    justify-content: space-between; /* 로고는 왼쪽, 유저 메뉴는 오른쪽에 배치 */
+    align-items: center; /* 아이템들이 수직으로 가운데에 오도록 설정 */
+    padding: 10px 0; /* 상단 바의 상하 여백을 10px로 설정 */
 }
 
 /* 로고 이미지 크기 설정 및 호버 시 확대 효과 */
 .logo img {
-    width: 100px; /* 로고 크기 설정 */
-    transition: transform 0.3s ease; /* 호버 시 확대 효과를 부드럽게 적용 */
+    width: 100px; /* 로고의 가로 크기를 100px로 설정 */
+    transition: transform 0.3s ease; /* 마우스를 올릴 때 확대 효과를 부드럽게 적용 */
 }
 
 .logo img:hover {
-    transform: scale(1.1); /* 로고에 마우스를 올렸을 때 1.1배로 확대 */
+    transform: scale(1.1); /* 마우스를 올렸을 때 1.1배로 확대 */
 }
 
-/* 유저 메뉴 리스트 스타일: 가로로 배치 및 항목 간 간격 설정 */
+/* 유저 메뉴 리스트 스타일 */
 .user-menu ul {
-    list-style-type: none; /* 기본 리스트 스타일 제거 (점 표시 제거) */
-    display: flex;
-    gap: 20px; /* 항목 간 간격 설정 */
+    list-style-type: none; /* 기본 리스트 스타일(점)을 제거 */
+    display: flex; /* 유저 메뉴 항목을 가로로 나열 */
+    gap: 20px; /* 각 항목 간 간격을 20px로 설정 */
     margin: 0;
     padding: 0;
 }
 
-/* 유저 메뉴 링크 스타일: 색상과 크기 설정 */
+/* 유저 메뉴 링크 스타일 */
 .user-menu ul li a {
-    color: #333; /* 기본 색상 설정 */
-    text-decoration: none; /* 밑줄 제거 */
-    font-size: 1.1em; /* 글씨 크기 설정 */
-    transition: color 0.3s ease; /* 색상이 부드럽게 변경되도록 트랜지션 추가 */
+    color: #333; /* 기본 색상을 짙은 회색으로 설정 */
+    text-decoration: none; /* 밑줄을 제거 */
+    font-size: 1.1em; /* 글씨 크기를 1.1em로 설정 */
+    transition: color 0.3s ease; /* 색상이 부드럽게 변경되도록 설정 */
 }
 
 /* 유저 메뉴 링크에 마우스를 올렸을 때 색상 변경 */
@@ -71,18 +158,17 @@ header {
 
 /* 네비게이션 스타일 */
 .main-nav {
-    background-color: #f9f9f9; /* 네비게이션 바 배경을 밝은 회색으로 설정 */
-    padding: 10px 0; /* 상하 여백 설정 */
+    background-color: #f9f9f9; /* 배경을 밝은 회색으로 설정 */
+    padding: 10px 0; /* 상하 여백을 10px로 설정 */
 }
 
-/* 네비게이션 메뉴 리스트를 중앙 정렬하고, 리스트 스타일 제거 */
 .main-nav ul {
-    display: flex;
-    justify-content: center; /* 항목을 중앙에 배치 */
-    list-style-type: none; /* 기본 리스트 스타일 제거 */
+    display: flex; /* 메뉴 항목들을 가로로 배치 */
+    justify-content: center; /* 항목을 중앙에 정렬 */
+    list-style-type: none; /* 기본 리스트 스타일(점)을 제거 */
     margin: 0;
     padding: 0;
-    gap: 20px; /* 각 메뉴 항목 간 간격 설정 */
+    gap: 20px; /* 각 메뉴 항목 간 간격을 20px로 설정 */
 }
 
 /* 네비게이션 메뉴 항목 스타일 */
@@ -90,71 +176,123 @@ header {
     color: #007bff; /* 파란색 링크 설정 */
     text-decoration: none; /* 밑줄 제거 */
     font-size: 1.1em; /* 글씨 크기 설정 */
-    transition: color 0.3s ease; /* 호버 시 부드럽게 색상 전환 */
+    transition: color 0.3s ease; /* 색상이 부드럽게 변경되도록 설정 */
 }
 
-/* 네비게이션 메뉴 항목에 마우스를 올렸을 때 색상 변화 */
 .main-nav ul li a:hover {
-    color: #0056b3; /* 파란색에서 더 진한 파란색으로 변경 */
+    color: #0056b3; /* 더 진한 파란색으로 변경 */
 }
 
 /* 사용자 액션 영역의 아이콘 크기와 스타일 */
-.user-actions .material-icons {
-    font-size: 28px; /* 아이콘 크기를 28px로 설정 */
-    color: #333; /* 기본 아이콘 색상을 회색으로 설정 */
-    margin: 0 15px; /* 아이콘 사이에 간격 추가 */
-    vertical-align: middle; /* 아이콘이 텍스트와 수직으로 정렬되도록 설정 */
-    transition: color 0.3s ease; /* 색상 변화가 부드럽게 적용되도록 트랜지션 추가 */
+.user-actions {
+    display: flex; /* 아이콘과 버튼을 수평으로 배치 */
+    align-items: center; /* 수직 가운데 정렬 */
 }
 
-/* 아이콘에 마우스를 올렸을 때 색상 변화 */
-.user-actions .material-icons:hover {
+/* 사용자 액션 영역의 아이콘 크기와 스타일 */
+.user-actions i {
+    font-size: 28px; /* Font Awesome 아이콘 크기를 28px로 설정 */
+    color: #333; /* 기본 색상을 짙은 회색으로 설정 */
+    margin: 0 15px; /* 아이콘 사이의 간격을 15px로 설정 */
+    transition: color 0.3s ease; /* 색상이 부드럽게 변경되도록 설정 */
+}
+/* 아이콘 호버시 설정 */
+.user-actions i:hover {
     color: #007bff; /* 호버 시 파란색으로 변경 */
 }
 
-/* 검색 및 내정보 아이콘을 정렬 */
-.user-actions a {
-    display: inline-block; /* 아이콘이 인라인 블록으로 표시되도록 설정 */
-    text-decoration: none; /* 링크 밑줄 제거 */
+
+/* 메인 콘텐츠 스타일 */
+main {
+    flex: 1; /* 메인이 남는 공간을 차지하도록 설정 */
+    display: flex; /* 메인 콘텐츠를 가로로 배치 */
+    gap: 20px; /* 콘텐츠 사이에 간격 추가 */
+    padding: 30px; /* 메인 콘텐츠 주변에 여백 추가 */
+    padding-top: 150px; /* 헤더에 가려지지 않도록 상단 여백 추가 */
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
 }
 
 /* 푸터 스타일 */
 footer {
-    background-color: #f1f1f1; /* 푸터 배경색을 밝은 회색으로 설정 */
-    padding: 30px 20px; /* 푸터 내부 여백 설정 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-    color: #888; /* 텍스트 색상 회색으로 설정 */
-    position: relative;
-    bottom: 0;
-    width: 100%; /* 푸터가 전체 화면 너비를 차지하도록 설정 */
-    flex-shrink: 0; /* 푸터가 줄어들지 않도록 설정 */
-    box-sizing: border-box; /* 패딩과 테두리가 너비 계산에 포함되도록 설정 */
-    overflow-x: hidden; /* 가로 스크롤바가 생기지 않도록 오버플로우 히든 */
+    background-color: #f1f1f1; /* 배경색을 밝은 회색으로 설정 */
+    padding: 40px 20px; /* 내부 여백을 위아래 40px, 좌우 20px 설정 */
+    color: #333; /* 텍스트 색상을 짙은 회색으로 설정 */
+    display: flex;
+    flex-direction: column; /* 푸터 내부 요소들을 세로로 정렬 */
+    align-items: center; /* 요소들을 가로 방향으로 중앙에 배치 */
+    text-align: center; /* 텍스트를 중앙에 배치 */
+    box-sizing: border-box; /* 패딩이 포함된 박스 모델을 사용 */
+    width: 100%; /* 푸터가 화면 전체 너비를 차지하도록 설정 */
 }
 
-/* 푸터 로고 이미지 크기 설정 및 호버 시 회전 효과 */
+/* 푸터 내부 컨텐츠 */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* 좌우에 요소들을 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+    width: 100%; /* 푸터 전체 너비를 사용 */
+    max-width: 1200px; /* 최대 너비를 1200px로 제한 */
+    margin-bottom: 20px; /* 푸터 하단에 간격 추가 */
+}
+
+/* 푸터 로고를 왼쪽에 배치 */
+.footer-logo {
+    flex: 1; /* 로고가 왼쪽에 위치하도록 설정 */
+    text-align: left; /* 로고가 왼쪽에 정렬되도록 설정 */
+}
+
 .footer-logo img {
-    width: 100px; /* 로고 이미지 크기 설정 */
-    margin-bottom: 10px; /* 아래쪽에 간격 추가 */
-    transition: transform 0.3s ease; /* 부드럽게 회전하도록 트랜지션 추가 */
+    width: 100px; /* 로고의 너비를 100px로 설정 */
 }
 
-.footer-logo img:hover {
-    transform: scale(1.1); /* 로고에 마우스를 올렸을 때 1.1배로 확대 */
+/* 푸터 링크 */
+.footer-links {
+    flex: 2; /* 가운데에 위치하여 로고와 소셜 아이콘 사이에 배치 */
+    text-align: center; /* 링크들을 중앙에 정렬 */
 }
 
-/* 푸터 정보 영역 스타일 */
-.footer-info {
-    margin: 10px 0; /* 위아래에 여백 추가 */
+.footer-links ul {
+    list-style: none; /* 기본 리스트 스타일(점)을 제거 */
+    padding: 0; /* 리스트 내부 여백 제거 */
+    margin: 0; /* 리스트 바깥 여백 제거 */
 }
 
-/* 푸터의 링크 스타일 */
-.footer-info a {
-    color: #333; /* 기본 링크 색상 설정 */
-    text-decoration: none; /* 밑줄 제거 */
+.footer-links ul li {
+    display: inline; /* 리스트 항목들을 가로로 배치 */
+    margin-right: 20px; /* 항목 사이에 20px 간격 추가 */
 }
 
-/* 링크에 마우스를 올렸을 때 색상 변경 */
-.footer-info a:hover {
-    color: #007bff; /* 파란색으로 변경 */
+.footer-links ul li a {
+    color: #333; /* 링크 색상을 짙은 회색으로 설정 */
+    text-decoration: none; /* 밑줄을 제거 */
+    transition: color 0.3s ease; /* 색상이 부드럽게 변경되도록 설정 */
+}
+
+.footer-links ul li a:hover {
+    color: #007bff; /* 호버 시 파란색으로 변경 */
+}
+
+/* 소셜 미디어 아이콘 */
+.footer-social {
+    flex: 1; /* 오른쪽에 배치되도록 설정 */
+    text-align: right; /* 소셜 아이콘을 오른쪽에 정렬 */
+}
+
+.footer-social a {
+    margin-left: 15px; /* 각 소셜 아이콘 사이에 15px 간격 추가 */
+    font-size: 24px; /* 아이콘 크기를 24px로 설정 */
+    color: #333; /* 기본 아이콘 색상을 짙은 회색으로 설정 */
+    text-decoration: none; /* 밑줄을 제거 */
+}
+
+.footer-social a:hover {
+    color: #007bff; /* 호버 시 파란색으로 변경 */
+}
+
+/* 저작권 정보 스타일 */
+.footer-copyright {
+    font-size: 0.9em; /* 글씨 크기를 0.9em으로 설정 */
+    color: #666; /* 저작권 텍스트 색상을 약간 연한 회색으로 설정 */
+    margin-top: 10px; /* 저작권 정보 위쪽에 여백 추가 */
 }

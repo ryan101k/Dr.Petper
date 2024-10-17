@@ -3,11 +3,6 @@
 /*  메인페이지 스타일 설정 */
 
 /* 기본 레이아웃 스타일 */
-main {
-    display: flex; /* 메인 콘텐츠를 가로로 배치 */
-    gap: 20px; /* 콘텐츠 사이에 간격 추가 */
-    padding: 20px; /* 메인 콘텐츠 주변에 여백 추가 */
-}
 
 /* 인기 질문 섹션 스타일 */
 .popular-questions {
@@ -54,6 +49,25 @@ main {
 .question-card h3 {
     margin: 0 0 10px; /* 제목 상하 여백 설정 */
     font-size: 1.3em; /* 제목 크기 설정 */
+}
+
+/* "나도 질문하기" 버튼 스타일 */
+.ask-btn {
+    background-color: #007bff; /* 파란색 배경 */
+    color: white; /* 흰색 텍스트 */
+    border: none; /* 테두리 제거 */
+    padding: 10px 20px; /* 버튼 내부 여백 설정 (상하, 좌우) */
+    font-size: 1.1em; /* 글자 크기 설정 */
+    border-radius: 30px; /* 버튼을 둥글게 설정 */
+    cursor: pointer; /* 클릭할 수 있는 커서로 설정 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 호버 시 배경색과 그림자가 부드럽게 변화 */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 버튼에 그림자 추가 */
+}
+
+/* 버튼에 마우스를 올렸을 때 */
+.ask-btn:hover {
+    background-color: #0056b3; /* 호버 시 더 진한 파란색으로 변경 */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* 그림자 더 진하게 */
 }
 
 /* 답변 수 스타일 */
