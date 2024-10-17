@@ -7,11 +7,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>닥터 펫퍼 공지사항 게시판</title>
+    <!-- Font Awesome 아이콘 사용하기 위한 CDN 추가 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="/css/reset.css">
+
     <!-- 공통 헤더/푸터 CSS -->
     <link rel="stylesheet" href="/css/header_footer.css">
-
-    <!-- 메인 페이지 전용 CSS -->
-    <link rel="stylesheet" href="/css/reset.css">
 
     <!-- 공지사항 css -->
      <link rel="stylesheet" href="/css/Announcement.css">
@@ -19,43 +22,75 @@
 
 </head>
 <body>
-        <!-- Header -->
+    <!-- Header (헤더) -->
     <header>
         <div class="top-bar">
+            <!-- 로고 섹션 -->
             <div class="logo">
                 <a href="/index/main.html">
                     <img src="/img/logo.PNG" alt="Logo">
                 </a>
             </div>
-            <div class="user-menu">
+
+            <!-- 네비게이션 메뉴 -->
+            <nav class="main-nav">
                 <ul>
-                    <li><a href="#profile">내정보</a></li>
-                    <li><a href="#topic2">Topic 2</a></li>
-                    <li><a href="#signup">회원가입</a></li>
-                    <li><a href="#login">로그인</a></li>
+                    <li><a href="/index/main.html">홈</a></li>
+                    <li><a href="/index/Announcement.html">공지사항</a></li>
+                    <li><a href="/index/HospitalStatus.html">병원찾기</a></li>
+                    <li><a href="/index/ExpertApplication.html">전문가 신청</a></li>
+                    <li><a href="/index/medication-info.html">약정보</a></li>
                 </ul>
+            </nav>
+
+            <!-- 사용자 메뉴와 검색 기능 -->
+            <div class="user-actions">
+                <!-- 검색 아이콘 -->
+                <a href="#search">
+                    <i class="fas fa-search"></i>
+                </a>
+                <!-- 프로필 아이콘 -->
+                 <!-- 임시링크 -->
+                <a href="/index/board.html">
+                    <i class="fas fa-user"></i>
+                </a>
+                <!-- 질문하기 버튼 -->
+                <button class="ask-btn" onclick="">나도 질문하기</button>
             </div>
         </div>
-        
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#notices">공지사항</a></li>
-                <li><a href="#consulting">전문가상담</a></li>
-                <li><a href="#find-hospital">병원찾기</a></li>
-                <li><a href="#expert-apply">전문가신청</a></li>
-                <li><a href="#drug-info">약정보</a></li>
-            </ul>
-        </nav>
     </header>
+
+    <!-- 새로운 헤더 -->
+    <div class="new-header">
+        <button class="home-btn">맨위로</button>
+        <div class="new-user-actions">
+            <a href="#search">
+                <i class="fas fa-search"></i>
+            </a>
+            <a href="#profile">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </div>
     <div class="anno_wrap">
         
         <div class="anno_top">
 
+<main>      
+    <div class="anno_Bn">
+   
+        <a class="anno_title" onclick="window.location.reload()" style="cursor: pointer;" >
+            <i class="fa-solid fa-bullhorn fa-lg"    >&nbsp;&nbsp;Dr.Petper 공지사항</i>
+        </a>
+    </div>   
             
-            <h1 class="anno_Bn">Dr.Petper 공지사항 입니다.</h1>
 
-            
-                
+
+
+
+
+
+</main>             
                 
 
 
@@ -83,18 +118,45 @@
 
 
 
-    <!-- Footer -->
+    <!-- Footer (푸터) -->
     <footer>
-        <div class="footer-logo">
-            <a href="/index/main.html">
-                <img src="/img/logo.PNG" alt="Footer Logo">
-            </a>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="/index/main.html">
+                    <img src="/img/logo.PNG" alt="Footer Logo">
+                </a>
+            </div>
+
+            <!-- 주요 링크 -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="/index/about.html">회사 소개</a></li>
+                    <li><a href="/index/contact.html">문의하기</a></li>
+                    <li><a href="/index/privacy.html">개인정보 처리방침</a></li>
+                    <li><a href="/index/terms.html">이용약관</a></li>
+                </ul>
+            </div>
+
+            <!-- 소셜 미디어 링크 -->
+            <div class="footer-social">
+                <a href="https://facebook.com">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/elonmusk">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/cristiano/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
         </div>
-        <div class="footer-info">
-            <a href="#register">정보 등록</a>
-        </div>
-        <p>© 2024 병원 정보 시스템. All rights reserved.</p>
+
+        <p class="footer-copyright">© 2024 Dr.Petper. All rights reserved.</p>
     </footer>
+
+    <!-- 자바스크립트 파일 포함 -->
+    <script src="/js/head.js"></script>
+    <script src="/js/main.js"></script>
 
 
     
