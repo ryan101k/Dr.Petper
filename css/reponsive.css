@@ -1,0 +1,83 @@
+/* 작은 화면용 (스마트폰) */
+@media only screen and (max-width: 600px) {
+    /* 헤더 스타일 */
+    header {
+        padding: 10px;
+        font-size: 0.9em; /* 텍스트 크기 조정 */
+    }
+
+    .new-header {
+        padding: 5px;
+        height: 45px; /* 헤더 높이 줄임 */
+    }
+
+    /* 로고 이미지 크기 조정 */
+    .logo img {
+        width: 80px; /* 로고 크기를 줄임 */
+    }
+
+    /* 사용자 메뉴 아이콘 크기 */
+    .new-user-actions a {
+        font-size: 1.5em; /* 아이콘 크기 줄임 */
+    }
+
+    /* 메인 콘텐츠 패딩 줄임 */
+    main {
+        padding: 20px; /* 상하좌우 여백 줄임 */
+        padding-top: 120px; /* 헤더에 맞춰 여백 조정 */
+    }
+
+    /* 푸터 스타일 */
+    footer {
+        padding: 30px 10px; /* 푸터 패딩 줄임 */
+    }
+}
+
+/* 중간 화면용 (태블릿) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* 헤더 스타일 */
+    header {
+        padding: 10px;
+    }
+
+    .new-header {
+        padding: 10px;
+        height: 50px;
+    }
+
+    /* 로고 이미지 크기 조정 */
+    .logo img {
+        width: 90px;
+    }
+
+    /* 사용자 메뉴 아이콘 크기 */
+    .new-user-actions a {
+        font-size: 1.7em;
+    }
+
+    /* 메인 콘텐츠 */
+    main {
+        padding: 25px;
+        padding-top: 130px;
+    }
+
+    /* 푸터 스타일 */
+    footer {
+        padding: 35px 15px;
+    }
+}
+
+/* 큰 화면용 (데스크탑) */
+@media only screen and (min-width: 1025px) {
+    /* 데스크탑에서는 기본 스타일 유지 */
+    /* 메인 콘텐츠 */
+    main {
+        padding: 30px;
+        padding-top: 150px;
+    }
+
+    /* 푸터 스타일 */
+    footer {
+        padding: 40px 20px;
+    }
+}
