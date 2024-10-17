@@ -1,16 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-       <!-- 공통 헤더/푸터 CSS -->
-       <link rel="stylesheet" href="/css/header_footer.css">
+    <title>회원 가입 페이지</title>
 
-       <!-- 메인 페이지 전용 CSS -->
-       <link rel="stylesheet" href="/css/reset.css">
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="/css/reset.css">
+
+    <!-- 공통 헤더/푸터 CSS -->
+    <link rel="stylesheet" href="/css/header_footer.css">
+
 </head>
 <body>
-    
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="logo">
+                <a href="/index/main.html">
+                    <img src="/img/logo.PNG" alt="Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/index/main.html">홈</a></li>
+                    <li><a href="/index/Announcement.html">공지사항</a></li>
+                    <li><a href="/index/HospitalStatus.html">병원찾기</a></li>
+                    <li><a href="/index/ExpertApplication.html">전문가 신청</a></li>
+                    <li><a href="/index/medication-info.html">약정보</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="#search"><img src="/img/search-icon.png" alt="검색"></a>
+                <a href="#profile"><img src="/img/profile-icon.png" alt="내정보"></a>
+                <button class="ask-btn" onclick="">나도 질문하기</button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-logo">
+            <a href="/index/main.html">
+                <img src="/img/logo.PNG" alt="Footer Logo">
+            </a>
+        </div>
+        <p>© 2024 동물 질문 답변 사이트. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/main.js"></script>
 </body>
 </html>

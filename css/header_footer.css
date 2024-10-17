@@ -1,107 +1,316 @@
 /* header_footer.css */
-/* 헤더 및 푸터 공통 스타일 */
+/* 2024-10-17 박국령 수정 */
+/* 이 CSS 파일은 웹 페이지의 전체적인 구조를 설정하고, 
+   헤더(header), 메인(main), 푸터(footer)의 스타일을 정의합니다 */
 
+/* html과 body 스타일 설정 */
+/* 페이지 전체 높이를 차지하도록 html과 body의 높이를 100%로 설정합니다.
+   margin과 padding을 0으로 설정하여 기본 여백을 모두 제거합니다.
+   display: flex는 Flexbox 레이아웃을 사용하고, flex-direction: column을 사용해
+   내용물이 위에서 아래로 나열되도록 합니다. */
+   html, body {
+    height: 100%;   /*전체 높이 100%*/
+    display: flex;  
+    flex-direction: column; /* 페이지의 메인과 푸터가 세로로 배치되도록 설정 */
+}
+
+/* 헤더 스타일 수정 */
+/* 헤더는 페이지 상단에 고정되고, 스크롤을 해도 항상 상단에 머물도록 합니다.
+   배경색을 흰색으로 설정하고, 아래쪽에 얇은 회색 테두리를 추가합니다.
+   패딩으로 내부 여백을 줄이고, box-shadow로 살짝 그림자 효과를 주어 
+   헤더가 부드럽게 떠 있는 느낌을 줍니다. */
 header {
-    /* 헤더 배경을 흰색으로 설정하고, 하단에 회색 테두리를 추가 */
     background-color: #fff;
     border-bottom: 1px solid #e0e0e0;
-    padding: 15px 20px;
+    padding: 5px 10px; /* 상하좌우로 5px, 10px의 내부 여백 설정 (세로 길이 줄이기) */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 1200px;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease, padding 0.3s ease, background-color 0.3s ease;
+    margin: 0 auto;
+    border-radius: 25px; /* 모서리를 둥글게 설정 */
 }
 
+
+/* 스크롤 시 헤더 높이 줄이기 */
+header.scrolled {
+    transform: translateY(-100px); /* 스크롤 시 헤더가 위로 사라짐 */
+    padding: 5px 15px; /* 스크롤 시 내부 여백 유지 */
+    background-color: rgba(255, 255, 255, 0.9); /* 배경을 약간 투명하게 변경 */
+}
+
+/* 새로운 헤더 스타일 */
+/* 새로운 헤더는 스크롤 시 기존 헤더 대신 나타나며,
+   배경색은 흰색, 텍스트 색상은 짙은 회색(#333)으로 설정됩니다.
+   패딩은 5px 상하, 10px 좌우로 설정하여 헤더의 내부 여백을 줄이고,
+   고정된 위치에서 상단에 나타나도록 합니다. */
+   .new-header {
+    border-radius: 25px; /* 모서리를 둥글게 설정 */
+    background-color: #fff; /* 헤더 배경색을 흰색으로 설정 */
+    color: #333; /* 텍스트 색상을 짙은 회색으로 설정 */
+    padding: 5px 10px; /* 상하 5px, 좌우 10px 패딩으로 내부 여백을 설정 */
+    position: fixed; /* 고정된 위치에서 스크롤 시에도 따라오도록 설정 */
+    top: 0; /* 화면 상단에 고정 */
+    left: 0; /* 화면 왼쪽에 고정 */
+    right: 0; /* 화면 오른쪽에 고정 */
+    z-index: 1001; /* 기존 헤더보다 위에 나타나도록 z-index 설정 */
+    display: flex; /* 요소들을 가로로 정렬 */
+    justify-content: space-between; /* 왼쪽과 오른쪽에 각각 요소 배치 */
+    align-items: center; /* 수직으로 중앙에 배치 */
+    height: 50px; /* 헤더의 세로 높이를 50px로 설정하여 얇게 만듦 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 아래쪽에 그림자 효과 추가 */
+    transform: translateY(-100%); /* 기본적으로 화면 위쪽으로 숨김 */
+    transition: transform 0.7s ease; /* 스크롤 시 부드러운 전환 효과 적용 */
+    max-width: 1200px; /* 헤더의 최대 너비를 1200px로 설정 */
+    margin: 0 auto; /* 중앙 정렬을 위해 자동 여백 설정 */
+}
+
+/* 홈 버튼 스타일 */
+/* 홈 버튼은 파란색 배경에 흰색 텍스트로 설정되며,
+   둥근 모서리와 클릭 시 커서가 변경됩니다. */
+.new-header .home-btn {
+    background-color: #007bff; /* 버튼 배경을 파란색(#007bff)으로 설정 */
+    color: #fff; /* 텍스트 색상을 흰색으로 설정 */
+    border: none; /* 버튼 테두리 제거 */
+    padding: 5px 15px; /* 버튼 내부 여백을 상하 5px, 좌우 15px로 설정 */
+    border-radius: 20px; /* 버튼의 모서리를 둥글게 설정 (20px) */
+    font-size: 1em; /* 글씨 크기를 1em으로 설정 */
+    cursor: pointer; /* 마우스 커서가 버튼 위에 있을 때 클릭 모양으로 변경 */
+    margin-left: 10px; /* 버튼 왼쪽에 10px 간격 추가 */
+    transition: background-color 0.3s ease, color 0.3s ease; /* 배경과 텍스트 색상 전환을 부드럽게 설정 */
+}
+
+/* 홈 버튼에 마우스를 올렸을 때 색상 효과 */
+/* 버튼에 마우스를 올리면 배경색이 진한 파란색으로 변경되고,
+   텍스트는 흰색으로 유지됩니다. */
+.new-header .home-btn:hover {
+    background-color: #0056b3; /* 배경을 진한 파란색(#0056b3)으로 변경 */
+    color: #fff; /* 텍스트는 흰색으로 유지 */
+}
+
+/* 사용자 메뉴 아이콘 스타일 */
+/* 사용자 메뉴의 아이콘들은 오른쪽에 배치되며,
+   각 아이콘 간의 간격을 유지하면서 크기와 색상을 설정합니다. */
+.new-user-actions {
+    display: flex; /* 아이콘들을 가로로 정렬 */
+    gap: 20px; /* 각 아이콘 사이에 20px 간격 추가 */
+    margin-right: 15px; /* 오른쪽에 15px 여백 추가 */
+}
+
+/* 사용자 메뉴 아이콘 스타일 */
+/* 아이콘의 기본 크기와 색상을 설정하고,
+   마우스를 올리면 색상이 파란색으로 변경됩니다. */
+.new-user-actions a {
+    color: #333; /* 기본 아이콘 색상을 짙은 회색(#333)으로 설정 */
+    text-decoration: none; /* 밑줄을 제거 */
+    font-size: 1.8em; /* 아이콘 크기를 1.8em으로 설정 */
+}
+
+/* 사용자 메뉴 아이콘에 마우스를 올렸을 때 색상 변화 */
+/* 마우스를 아이콘에 올리면 색상이 파란색으로 변경됩니다. */
+.new-user-actions a:hover {
+    color: #007bff; /* 호버 시 파란색(#007bff)으로 변경 */
+}
+
+/* 상단 바 스타일: 로고와 유저 메뉴를 좌우로 정렬 */
 .top-bar {
-    /* 상단 바를 플렉스박스로 설정하여 좌우로 정렬 (로고는 좌측, 유저 메뉴는 우측) */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    justify-content: space-between; /* 로고는 왼쪽, 유저 메뉴는 오른쪽에 배치 */
+    align-items: center; /* 아이템들이 수직으로 가운데에 오도록 설정 */
+    padding: 10px 0; /* 상단 바의 상하 여백을 10px로 설정 */
 }
 
+/* 로고 이미지 크기 설정 및 호버 시 확대 효과 */
 .logo img {
-    /* 로고 이미지의 크기를 100px로 설정 */
-    width: 100px;
+    width: 100px; /* 로고의 가로 크기를 100px로 설정 */
+    transition: transform 0.3s ease; /* 마우스를 올릴 때 확대 효과를 부드럽게 적용 */
 }
 
+.logo img:hover {
+    transform: scale(1.1); /* 마우스를 올렸을 때 1.1배로 확대 */
+}
+
+/* 유저 메뉴 리스트 스타일 */
 .user-menu ul {
-    /* 유저 메뉴 리스트의 기본 점을 없애고, 아이템을 가로로 배치하며, 각 항목 간격을 20px로 설정 */
-    list-style-type: none;
-    display: flex;
-    gap: 20px;
+    display: flex; /* 유저 메뉴 항목을 가로로 나열 */
+    gap: 20px; /* 각 항목 간 간격을 20px로 설정 */
     margin: 0;
     padding: 0;
 }
 
+/* 유저 메뉴 링크 스타일 */
 .user-menu ul li a {
-    /* 유저 메뉴의 링크 색상을 회색으로 설정하고, 밑줄을 제거 */
-    color: #333;
-    text-decoration: none;
-    font-size: 1.1em;
+    color: #333; /* 기본 색상을 짙은 회색으로 설정 */
+    text-decoration: none; /* 밑줄을 제거 */
+    font-size: 1.1em; /* 글씨 크기를 1.1em로 설정 */
+    transition: color 0.3s ease; /* 색상이 부드럽게 변경되도록 설정 */
 }
 
+/* 유저 메뉴 링크에 마우스를 올렸을 때 색상 변경 */
 .user-menu ul li a:hover {
-    /* 유저 메뉴 링크에 호버 시 색상 변경 */
-    color: #007bff;
+    color: #007bff; /* 파란색으로 변경 */
 }
 
+/* 네비게이션 스타일 */
 .main-nav {
-    /* 네비게이션 바의 배경을 밝은 회색으로 설정 */
-    background-color: #f9f9f9;
-    padding: 10px 0;
+    background-color: #f9f9f9; /* 배경을 밝은 회색으로 설정 */
+    padding: 10px 0; /* 상하 여백을 10px로 설정 */
 }
 
 .main-nav ul {
-    /* 네비게이션 메뉴 리스트를 중앙 정렬하고, 리스트 스타일을 제거 */
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
+    display: flex; /* 메뉴 항목들을 가로로 배치 */
+    justify-content: center; /* 항목을 중앙에 정렬 */
+    gap: 20px; /* 각 메뉴 항목 간 간격을 20px로 설정 */
 }
 
-.main-nav ul li {
-    /* 각 네비게이션 메뉴 항목의 좌우에 여백을 줌 */
-    margin: 0 15px;
-}
-
+/* 네비게이션 메뉴 항목 스타일 */
 .main-nav ul li a {
-    /* 네비게이션 메뉴 링크의 색상과 스타일 */
-    color: #007bff;
-    text-decoration: none;
-    font-size: 1.1em;
+    color: #007bff; /* 파란색 링크 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-size: 1.1em; /* 글씨 크기 설정 */
+    transition: color 0.3s ease; /* 색상이 부드럽게 변경되도록 설정 */
 }
-
+/* 헤더 네비게이션 버튼 호버시 기능*/
 .main-nav ul li a:hover {
-    /* 네비게이션 메뉴 항목에 마우스 호버 시 색상 변화 */
-    color: #0056b3;
+    color: #0056b3; /* 더 진한 파란색으로 변경 */
 }
 
-/* Footer */
+/* 사용자 액션 영역의 아이콘 크기와 스타일 */
+.user-actions {
+    display: flex; /* 아이콘과 버튼을 수평으로 배치 */
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+/* 사용자 액션 영역의 아이콘 크기와 스타일 */
+.user-actions i {
+    font-size: 28px; /* Font Awesome 아이콘 크기를 28px로 설정 */
+    color: #333; /* 기본 색상을 짙은 회색으로 설정 */
+    margin: 0 15px; /* 아이콘 사이의 간격을 15px로 설정 */
+    transition: color 0.3s ease; /* 색상이 부드럽게 변경되도록 설정 */
+}
+/* 아이콘 호버시 설정 */
+.user-actions i:hover {
+    color: #007bff; /* 호버 시 파란색으로 변경 */
+}
+
+/* "나도 질문하기" 버튼 스타일 */
+/* 버튼의 배경색을 파란색(#007bff), 텍스트 색상을 흰색으로 설정 */
+/* 버튼을 둥글게(30px) 만들고 그림자와 마우스를 올렸을 때 부드럽게 변하는 효과 추가 */
+.ask-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* "나도 질문하기" 버튼에 마우스를 올렸을 때 */
+/* 배경색을 더 진한 파란색(#0056b3)으로 바꾸고 그림자를 진하게 설정 */
+.ask-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 메인 콘텐츠 스타일 */
+main {
+    flex: 1; /* 메인이 남는 공간을 차지하도록 설정 */
+    display: flex; /* 메인 콘텐츠를 가로로 배치 */
+    gap: 20px; /* 콘텐츠 사이에 간격 추가 */
+    padding: 30px; /* 메인 콘텐츠 주변에 여백 추가 */
+    padding-top: 150px; /* 헤더에 가려지지 않도록 상단 여백 추가 */
+    max-width: 1200px; /* 최대 너비 설정 */
+    margin: 0 auto; /* 가운데 정렬 */
+}
+
+/* 푸터 스타일 */
 footer {
-    /* 푸터 배경색과 패딩, 텍스트 정렬 및 색상 설정 */
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: center;
-    color: #888;
+    background-color: #f1f1f1; /* 배경색을 밝은 회색으로 설정 */
+    padding: 40px 20px; /* 내부 여백을 위아래 40px, 좌우 20px 설정 */
+    color: #333; /* 텍스트 색상을 짙은 회색으로 설정 */
+    display: flex;
+    flex-direction: column; /* 푸터 내부 요소들을 세로로 정렬 */
+    align-items: center; /* 요소들을 가로 방향으로 중앙에 배치 */
+    text-align: center; /* 텍스트를 중앙에 배치 */
+    box-sizing: border-box; /* 패딩이 포함된 박스 모델을 사용 */
+    width: 100%; /* 푸터가 화면 전체 너비를 차지하도록 설정 */
+}
+
+/* 푸터 내부 컨텐츠 */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* 좌우에 요소들을 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+    width: 100%; /* 푸터 전체 너비를 사용 */
+    max-width: 1200px; /* 최대 너비를 1200px로 제한 */
+    margin-bottom: 20px; /* 푸터 하단에 간격 추가 */
+}
+
+/* 푸터 로고를 왼쪽에 배치 */
+.footer-logo {
+    flex: 1; /* 로고가 왼쪽에 위치하도록 설정 */
+    text-align: left; /* 로고가 왼쪽에 정렬되도록 설정 */
 }
 
 .footer-logo img {
-    /* 푸터 로고 이미지 크기를 100px로 설정 */
-    width: 100px;
-    margin-bottom: 10px;
+    width: 100px; /* 로고의 너비를 100px로 설정 */
 }
 
-.footer-info {
-    /* 푸터 정보 등록 링크에 10px의 위아래 여백을 추가 */
-    margin: 10px 0;
+/* 푸터 링크 */
+.footer-links {
+    flex: 2; /* 가운데에 위치하여 로고와 소셜 아이콘 사이에 배치 */
+    text-align: center; /* 링크들을 중앙에 정렬 */
 }
 
-.footer-info a {
-    /* 푸터의 정보 등록 링크 색상을 회색으로 설정하고, 밑줄을 제거 */
-    color: #333;
-    text-decoration: none;
+.footer-links ul {
+    list-style: none; /* 기본 리스트 스타일(점)을 제거 */
+    padding: 0; /* 리스트 내부 여백 제거 */
+    margin: 0; /* 리스트 바깥 여백 제거 */
 }
 
-.footer-info a:hover {
-    /* 푸터의 정보 등록 링크에 마우스 호버 시 색상 변경 */
-    color: #007bff;
+.footer-links ul li {
+    display: inline; /* 리스트 항목들을 가로로 배치 */
+    margin-right: 20px; /* 항목 사이에 20px 간격 추가 */
+}
+
+.footer-links ul li a {
+    color: #333; /* 링크 색상을 짙은 회색으로 설정 */
+    text-decoration: none; /* 밑줄을 제거 */
+    transition: color 0.3s ease; /* 색상이 부드럽게 변경되도록 설정 */
+}
+
+.footer-links ul li a:hover {
+    color: #007bff; /* 호버 시 파란색으로 변경 */
+}
+
+/* 소셜 미디어 아이콘 */
+.footer-social {
+    flex: 1; /* 오른쪽에 배치되도록 설정 */
+    text-align: right; /* 소셜 아이콘을 오른쪽에 정렬 */
+}
+
+.footer-social a {
+    margin-left: 15px; /* 각 소셜 아이콘 사이에 15px 간격 추가 */
+    font-size: 24px; /* 아이콘 크기를 24px로 설정 */
+    color: #333; /* 기본 아이콘 색상을 짙은 회색으로 설정 */
+    text-decoration: none; /* 밑줄을 제거 */
+}
+
+.footer-social a:hover {
+    color: #007bff; /* 호버 시 파란색으로 변경 */
+}
+
+/* 저작권 정보 스타일 */
+.footer-copyright {
+    font-size: 0.9em; /* 글씨 크기를 0.9em으로 설정 */
+    color: #666; /* 저작권 텍스트 색상을 약간 연한 회색으로 설정 */
+    margin-top: 10px; /* 저작권 정보 위쪽에 여백 추가 */
 }
