@@ -1,7 +1,30 @@
-.medicationMain {
-    flex: 1;
+#medication-h {
+    font-size: 30px;
 }
-.medicationTable {
-    border: 2px solid blue;
+
+#medication-search {
+    width: 500px;
+    height: 40px;
+
+}
+#medication-search-btn {
+    width: 100px;
+    height: 40px;
+    font-size: 25px;
+}
+
+
+
+
+
+.medication-num {
+    border: 3px solid brown;
+    width: 100px;
+    height: 30px;
     
+}
+.medication-name {
+    width: 500px;
+    border: 3px solid blue;
+    text-align: center;
 }
