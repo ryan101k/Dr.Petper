@@ -1,32 +1,7 @@
-h1{
-    padding-top: 50px;
-    text-align: center;
-    font-size: 30px;
+.medicationMain {
+    flex: 1;
 }
-div#medicineName{
-    padding-top: 100px;
-    padding-left: 50%;
-    margin-left: -200px;
-}
-div#medicineName>input{
-    width: 400px;
-    height: 40px;
-    font-size: 30px;
-}
-div#medicineInfo{
-    text-align: center;
-    padding-top: 20px;
-}
-#medicineInfo>p{
-    font-size: 20px;
-    padding-top: 30px;
-}
-div#nextPage{
-    padding-top: 20px;
-    text-align: center;
-    font-size: 20px;
-}
-
-#nextPage>a{
-    padding-left: 20px;
+.medicationTable {
+    border: 2px solid blue;
+    
 }
