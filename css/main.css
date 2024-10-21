@@ -1,222 +1,198 @@
 /* main.css */
 /* 2024-10-17 박국령수정 */
-/*  메인페이지 스타일 설정 */
-
-/* 기본 레이아웃 스타일 */
+/* 메인페이지 스타일 설정 */
 
 /* 인기 질문 섹션을 화면의 2/3 비율로 차지하도록 설정 */
 .popular-questions {
-    flex: 2;
+    flex: 2; /* 메인 영역이 사이드바보다 더 많은 공간을 차지하게 만듦 */
+    height: auto; /* 높이를 자동으로 설정하여 콘텐츠에 맞게 조절되도록 함 */
+    overflow-y: visible; /* 스크롤이 필요할 때 나타나지 않도록 설정 (즉, 별도의 스크롤 없음) */
 }
 
 /* 인기 질문 섹션의 제목 스타일 */
-/* 제목의 크기를 1.8em으로 설정하고, 아래쪽에 20px의 여백 추가 */
 .popular-questions h2 {
-    font-size: 1.8em;
-    margin-bottom: 20px;
+    font-size: 1.8em; /* 제목의 글자 크기를 1.8배로 설정 */
+    margin-bottom: 20px; /* 제목 아래쪽에 20px의 여백을 추가하여 콘텐츠와의 간격을 만듦 */
 }
 
 /* 질문 카드 스타일 */
-/* 각 질문 카드에 흰색 배경, 내부 여백 20px, 카드 사이의 간격 15px을 설정 */
-/* 카드의 모서리를 둥글게(25px) 처리하고, 얇은 회색 테두리와 그림자를 추가하여 입체감을 부여 */
-/* 마우스를 올렸을 때 카드를 살짝 확대하고 그림자가 진해지는 효과 추가 */
+/* 각 질문 카드를 감싸는 영역의 스타일을 설정 */
 .question-card {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 25px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* 카드 배경색을 흰색으로 설정 */
+    padding: 20px; /* 카드 내부 여백을 20px로 설정 (내용이 카드 내부에서 너무 붙지 않게) */
+    margin-bottom: 15px; /* 각 카드 사이에 15px의 간격을 추가 */
+    border-radius: 25px; /* 카드의 모서리를 둥글게 설정 (25px 반경으로) */
+    border: 1px solid #e0e0e0; /* 카드에 얇은 회색 테두리 추가 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 카드에 가벼운 그림자 효과 추가 (살짝 입체감 부여) */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 마우스를 올렸을 때 카드의 움직임과 그림자 효과를 부드럽게 전환 */
 }
 
-/* 질문 카드에 마우스를 올렸을 때 카드가 위로 살짝 올라가고 그림자가 더 진해지는 효과 */
+/* 질문 카드에 마우스를 올렸을 때 발생하는 효과 */
 .question-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* 카드가 위로 5px 이동하는 효과 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자가 진해지면서 더 입체적으로 보이는 효과 */
 }
-/* 제목 링크에서 밑줄 제거 */
+
+/* 질문 카드 내부 링크에서 밑줄 제거 */
 .question-card a {
-
-    text-decoration: none; /* 밑줄 제거 */
-    color: #007bff; /* 마우스 오버 시 텍스트 색상 변경 */
+    text-decoration: none; /* 링크에 기본적으로 적용되는 밑줄을 제거 */
+    color: #007bff; /* 링크 텍스트 색상을 파란색으로 설정 */
 }
 
-/* 제목 링크에 마우스를 올렸을 때 스타일 */
+/* 링크에 마우스를 올렸을 때 스타일 */
 .question-card a:hover {
-    color: #0056b3; /* 마우스 오버 시 텍스트 색상 변경 */
+    color: #0056b3; /* 마우스를 올렸을 때 링크 색상을 더 진한 파란색으로 변경 */
 }
 
 /* 질문 정보 섹션 스타일 */
-/* 질문 정보들을 가로로 배치하고 각 항목 간 10px 간격을 둠 */
-/* 텍스트 색상은 #888로 설정하고 아래쪽에 10px 여백을 추가 */
+/* 질문 카드 위에 있는 질문 작성자, 카테고리 등의 정보를 나열 */
 .question-info {
-    display: flex;
-    gap: 10px;
-    color: #888;
-    margin-bottom: 10px;
+    display: flex; /* 질문 정보를 가로로 배치 */
+    gap: 10px; /* 각 정보 사이에 10px 간격을 추가 */
+    color: #888; /* 텍스트 색상을 연한 회색(#888)으로 설정 */
+    margin-bottom: 10px; /* 질문 정보 섹션과 질문 제목 사이에 10px의 간격 추가 */
 }
 
 /* 질문 정보 섹션에서 카테고리 이름의 스타일 */
-/* 카테고리 이름을 파란색(#007bff)과 굵은 글씨체로 설정 */
 .question-info .category {
-    color: #007bff;
-    font-weight: bold;
+    color: #007bff; /* 카테고리 이름을 파란색으로 설정 */
+    font-weight: bold; /* 카테고리 텍스트를 굵게 표시 */
 }
 
 /* 질문 제목 스타일 */
-/* 제목의 상단과 하단에 여백을 설정하고 글자 크기를 1.3em으로 설정 */
 .question-card h3 {
-    margin: 0 0 10px;
-    font-size: 1.3em;
+    margin: 0 0 10px; /* 제목 상단에는 여백이 없고, 하단에만 10px 여백을 추가 */
+    font-size: 1.3em; /* 제목 글자 크기를 1.3배로 설정 */
 }
 
-
-
 /* 답변 수 텍스트 스타일 */
-/* 위쪽에 10px의 여백을 두고, 답변 수를 파란색(#007bff)과 굵은 글씨체로 설정 */
 .response-count {
-    margin-top: 10px;
-    color: #007bff;
-    font-weight: bold;
+    margin-top: 10px; /* 위쪽에 10px 여백 추가 */
+    color: #007bff; /* 답변 수 텍스트를 파란색으로 설정 */
+    font-weight: bold; /* 답변 수 텍스트를 굵게 표시 */
 }
 
 /* 사이드바 스타일 */
-/* 사이드바를 화면의 1/3 비율로 차지하도록 설정 */
+/* 사이드바도 메인과 함께 스크롤되도록 설정 */
 .sidebar {
-    flex: 1;
+    flex: 1; /* 사이드바가 메인 영역보다 적은 공간을 차지하게 만듦 */
+    position: static; /* 고정되지 않도록 설정 (즉, 스크롤 시 함께 이동) */
+    height: auto; /* 높이를 자동으로 설정하여 콘텐츠에 맞게 조절되도록 함 */
+    width: 300px; /* 사이드바의 너비를 300px로 고정 */
 }
 
 /* 사이드바 섹션 스타일 */
-/* 사이드바의 각 섹션(인기 토픽, 회원가입 프로모션, 로그인)을 흰색 배경과 둥근 모서리(25px)로 설정 */
-/* 섹션마다 20px의 내부 여백과 15px의 아래쪽 간격을 두고, 테두리 및 호버 시 그림자 효과를 추가 */
+/* 사이드바에 있는 각 섹션(예: 인기 토픽, 회원가입 프로모션)의 스타일을 설정 */
 .trending-topics, .signup-promo, .mini-login {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 25px;
-    border: 1px solid #e0e0e0;
-    margin-bottom: 15px;
-    transition: box-shadow 0.3s ease;
+    background-color: #fff; /* 흰색 배경으로 설정 */
+    padding: 20px; /* 내부 여백을 20px로 설정하여 내용이 너무 붙지 않게 함 */
+    border-radius: 25px; /* 모서리를 둥글게 설정 */
+    border: 1px solid #e0e0e0; /* 얇은 회색 테두리 추가 */
+    margin-bottom: 15px; /* 섹션 사이에 15px의 간격을 추가 */
+    transition: box-shadow 0.3s ease; /* 호버 시 그림자 효과를 부드럽게 전환 */
 }
 
 /* 사이드바 섹션에 마우스를 올렸을 때 더 진한 그림자 효과 추가 */
 .trending-topics:hover, .signup-promo:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 마우스를 올리면 섹션의 그림자가 진해짐 */
 }
 
 /* 로그인 섹션 제목과 설명 스타일 */
 .mini-login h2 {
-    font-size: 1.2em;
-    color: #666;
+    font-size: 1.2em; /* 로그인 섹션 제목의 글자 크기를 1.2배로 설정 */
+    color: #666; /* 제목의 색상을 연한 회색(#666)으로 설정 */
     text-align: center; /* 텍스트를 가운데 정렬 */
-    margin-bottom: 20px; /* 설명 아래 여백 추가 */
+    margin-bottom: 20px; /* 제목 아래에 20px의 여백을 추가 */
 }
 
-/* 사이드바 스타일 설정 */
-.sidebar {
-    width: 300px; /* 사이드바 너비 설정 */
-}
-
-/* 로그인 섹션 스타일 */
+/* 사이드바 섹션 설정 */
 .sidebar-section.mini-login {
     text-align: center; /* 텍스트를 가운데 정렬 */
-    margin-bottom: 20px; /* 아래쪽 여백 */
+    margin-bottom: 20px; /* 섹션 아래쪽에 20px 여백 추가 */
 }
 
 /* 로그인 버튼 스타일 */
 .login-btn {
-    background-color: #007bff; /* 파란색 배경 */
-    color: white; /* 텍스트 색상을 흰색으로 설정 */
+    background-color: #007bff; /* 파란색 배경 설정 */
+    color: white; /* 텍스트를 흰색으로 설정 */
     border: none; /* 테두리 제거 */
-    padding: 20px 100px; /* 여백 설정 */
-    font-size: 1.2em; /* 글자 크기 설정 */
-    cursor: pointer; /* 클릭 가능하도록 커서 설정 */
-    margin-bottom: 10px; /* 아래쪽 여백 */
-    border-radius: 5px; /* 버튼 모서리 둥글게 */
+    padding: 20px 100px; /* 내부 여백을 넉넉하게 설정 (버튼을 크게 보이게 함) */
+    font-size: 1.2em; /* 글자 크기를 1.2배로 설정 */
+    cursor: pointer; /* 커서를 포인터로 변경하여 버튼임을 나타냄 */
+    margin-bottom: 10px; /* 아래쪽에 10px 간격 추가 */
+    border-radius: 5px; /* 버튼의 모서리를 둥글게 설정 */
 }
 
-/* 링크 스타일을 제거하고 버튼처럼 보이도록 설정 */
+/* 로그인 버튼 내부의 링크 스타일 제거 */
 .login-btn a {
-    text-decoration: none; /* 밑줄 제거 */
-    color: white; /* 텍스트 색상 */
+    text-decoration: none; /* 링크의 기본 밑줄을 제거 */
+    color: white; /* 링크 텍스트 색상을 흰색으로 설정 */
 }
 
 /* 작은 버튼들 스타일 */
 .mini-buttons {
-    display: flex; /* 버튼을 가로로 배치 */
-    justify-content: space-around; /* 버튼 사이의 간격 */
+    display: flex; /* 버튼들을 가로로 나열 */
+    justify-content: space-around; /* 버튼들 사이에 공간을 고르게 배치 */
 }
 
 .mini-btn {
     border: none; /* 테두리 제거 */
-    padding: 8px 10px; /* 여백 설정 */
-    font-size: 0.9em; /* 글자 크기 */
-    cursor: pointer; /* 클릭 가능하도록 커서 설정 */
-    border-radius: 5px; /* 둥근 모서리 */
+    padding: 8px 10px; /* 내부 여백 설정 */
+    font-size: 0.9em; /* 글자 크기를 0.9배로 설정 */
+    cursor: pointer; /* 커서를 포인터로 변경 */
+    border-radius: 5px; /* 버튼의 모서리를 둥글게 설정 */
 }
-
 
 /* 마지막 작은 버튼의 오른쪽 여백 제거 */
 .mini-buttons .mini-btn:last-child {
     margin-right: 0;
 }
 
-
-
 /* 인기 토픽 섹션 제목 스타일 */
-/* 제목 크기를 1.3em으로 설정하고 아래쪽에 15px의 여백 추가 */
 .trending-topics h3 {
-    font-size: 1.3em;
-    margin-bottom: 15px;
+    font-size: 1.3em; /* 제목 크기를 1.3배로 설정 */
+    margin-bottom: 15px; /* 제목 아래에 15px 여백 추가 */
 }
-
-
 
 /* 리스트 항목 스타일 */
-/* 각 항목에 10px의 간격을 두고 글씨 크기를 1.1em으로 설정 */
-/* 파란색 텍스트와 마우스를 올렸을 때 부드럽게 색이 변하도록 설정 */
 .trending-topics ul li {
-    margin-bottom: 10px;
-    font-size: 1.1em;
-    color: #007bff;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    margin-bottom: 10px; /* 항목 간의 간격을 10px로 설정 */
+    font-size: 1.1em; /* 리스트 항목의 글자 크기를 1.1배로 설정 */
+    color: #007bff; /* 항목의 텍스트 색상을 파란색으로 설정 */
+    cursor: pointer; /* 항목에 마우스를 올리면 클릭 가능하게 커서 변경 */
+    transition: color 0.3s ease; /* 텍스트 색상이 부드럽게 전환되도록 설정 */
 }
 
-/* 리스트 항목에 마우스를 올렸을 때 텍스트 색상을 더 진한 파란색(#0056b3)으로 변경 */
+/* 리스트 항목에 마우스를 올렸을 때 텍스트 색상을 더 진한 파란색으로 변경 */
 .trending-topics ul li:hover {
     color: #0056b3;
 }
 
 /* 회원가입 프로모션 제목 스타일 */
-/* 제목 크기를 1.4em으로 설정하고 아래쪽에 10px의 여백 추가 */
 .signup-promo h3 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
+    font-size: 1.4em; /* 제목 크기를 1.4배로 설정 */
+    margin-bottom: 10px; /* 제목 아래에 10px 여백 추가 */
 }
 
 /* 회원가입 설명 텍스트 스타일 */
-/* 설명 텍스트에 15px의 아래쪽 여백을 두고 글씨 크기를 0.9em으로 설정 */
-/* 텍스트 색상은 회색(#666)으로 설정 */
 .signup-promo p {
-    margin-bottom: 15px;
-    font-size: 0.9em;
-    color: #666;
+    margin-bottom: 15px; /* 설명 텍스트 아래에 15px 여백 추가 */
+    font-size: 0.9em; /* 글자 크기를 0.9배로 설정 */
+    color: #666; /* 텍스트 색상을 연한 회색(#666)으로 설정 */
 }
 
 /* 회원가입 버튼 스타일 */
-/* 파란색(#007bff) 배경에 흰색 텍스트, 둥근 모서리(20px), 부드러운 배경색 변화를 추가 */
 .signup-promo button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    background-color: #007bff; /* 파란색 배경 설정 */
+    color: white; /* 텍스트 색상을 흰색으로 설정 */
+    border: none; /* 테두리 제거 */
+    padding: 10px 20px; /* 버튼의 내부 여백 설정 */
+    border-radius: 20px; /* 버튼의 모서리를 둥글게 설정 */
+    cursor: pointer; /* 커서를 포인터로 변경 */
+    transition: background-color 0.3s ease; /* 배경색이 부드럽게 전환되도록 설정 */
 }
 
-/* 회원가입 버튼에 마우스를 올렸을 때 더 진한 파란색(#0056b3)으로 배경색 변경 */
+/* 회원가입 버튼에 마우스를 올렸을 때 배경색 변경 */
 .signup-promo button:hover {
-    background-color: #0056b3;
+    background-color: #0056b3; /* 배경색을 더 진한 파란색으로 변경 */
 }
