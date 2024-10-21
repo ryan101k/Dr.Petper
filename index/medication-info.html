@@ -71,36 +71,56 @@
         </div>
         <!-- 메인 시작부분 -->
         <main>
-            <section class="medicationMain">
-                <form action="">
-                    <table class="medicationTable">
+            <section>
+                <!-- 약 이름 검색하는 부분 묶은거 -->
+                <div id="medication-header">
+                    <form action="">
+                        <!-- 약 검색창 테이블 -->
+                        <table>   
+                            <tr>
+                                <td id="medication-h">
+                                    약 이름
+                                </td>
+                                <td >
+                                    <!-- 약 검색 -->
+                                    <input type="text" id="medication-search">
+                                    <!-- 약 검색 후 버튼 -->
+                                    <input type="submit" id="medication-search-btn" value="검색">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <!-- 약 번호 약 정보 묶은 거 -->
+                <div id="medication-main">
+                    <!-- 약 번호 이름 상단에 띄우는 테이블 -->
+                    <table id="medication-table1">
                         <tr>
-                            <td>
-                                약 이름
-                            </td>
-                            <td>    
-                                <input type="text">
-                                <input type="submit" value="검색">
-                            </td>
+                            <!-- 약 번호 -->
+                            <td class="medication-num">번호</td>
+                            <td class="medication-name">약 이름</td>
                         </tr>
                     </table>
-                </form>
+                    <!-- 약 이름을 누르면 약 정보로 넘어가는 테이블 -->
+                    <table>
+                        <tr>
+                            <td class="medication-num">1</td>
+                            <td class="medication-name"><a href="">몸에 좋은 약</a></td>
+                        </tr>   
+                        <tr>
+                            <td class="medication-num">2</td>
+                            <td class="medication-name"><a href="">몸에 조금 좋은 약</a></td>
+                        </tr>
 
-                  <!-- 약 -->
-                  <table class="medicationTable">
-                    <tr>
-                        <td>번호</td>
-                        <td>약 이름</td>
-                    </tr>
-                </table>
-                <!-- 약 등록 -->
-                <table class="medicationTable">
-                    <tr>
-            
-                        <td><button type="button">약 등록</button></td>
-                    </tr>
-                    
-                </table>
+                    </table>
+                </div>
+                <!-- 약 등록 버튼 -->
+                    <table>
+                        <tr>
+                            <td><button type="button">약 등록</button></td>
+                        </tr>
+                    </table>
+                
             </section>
       
             

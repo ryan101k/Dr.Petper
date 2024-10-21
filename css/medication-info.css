@@ -1,7 +1,47 @@
-.medicationMain {
-    flex: 1;
+#medication-header {
+    padding-bottom: 50px;
 }
-.medicationTable {
-    border: 2px solid blue;
+
+#medication-h {
+    font-size: 30px;
+    padding-right: 50px;
+   
+}
+
+#medication-main {
+    padding-bottom: 30px;
+
+}
+
+#medication-table1 {
+
+    font-size: 25px;
     
 }
+
+#medication-search {
+    width: 400px;
+    height: 40px;
+
+}
+#medication-search-btn {
+    width: 100px;
+    height: 40px;
+    font-size: 25px;
+    
+}
+
+.medication-num {
+    font-size: 25px;
+    border: 3px solid brown;
+    width: 100px;
+    height: 30px;
+    
+}
+.medication-name {
+    width: 800px;
+    height: 50px;
+    border: 3px solid blue;
+    text-align: center;
+}
+
