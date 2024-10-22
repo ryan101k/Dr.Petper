@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>병원현황</title> 
+        <!-- Font Awesome 아이콘 사용하기 위한 CDN 추가 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+        <!-- CSS 초기화 -->
+        <link rel="stylesheet" href="/css/reset.css">
+        <!-- 공통 헤더/푸터 CSS -->
+        <link rel="stylesheet" href="/css/header_footer.css">
+    </head>
+<body>
+      <!-- Header (헤더) -->
+      <header>
+        <div class="top-bar">
+            <!-- 로고 섹션 -->
+            <div class="logo">
+                <a href="/index/main.html">
+                    <img src="/img/logo.PNG" alt="Logo">
+                </a>
+            </div>
+
+            <!-- 네비게이션 메뉴 -->
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/index/main.html">홈</a></li>
+                    <li><a href="/index/Announcement.html">공지사항</a></li>
+                    <li><a href="/index/HospitalStatus.html">병원찾기</a></li>
+                    <li><a href="/index/ExpertApplication.html">전문가 신청</a></li>
+                    <li><a href="/index/medication-info.html">약정보</a></li>
+                </ul>
+            </nav>
+
+            <!-- 사용자 메뉴와 검색 기능 -->
+            <div class="user-actions">
+                <!-- 검색 아이콘 -->
+                <a href="#search">
+                    <i class="fas fa-search"></i>
+                </a>
+                <!-- 프로필 아이콘 -->
+                <a href="#profile">
+                    <i class="fas fa-user"></i>
+                </a>
+                <!-- 질문하기 버튼 -->
+                <button class="ask-btn" onclick="">나도 질문하기</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 새로운 헤더 -->
+    <div class="new-header">
+        <button class="home-btn">맨위로</button>
+        <div class="new-user-actions">
+            <a href="#search">
+                <i class="fas fa-search"></i>
+            </a>
+            <a href="#profile">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </div>
+
+    <main><!--메인-->
+        <div class="header"> <!-- 헤더 -->
+            <span><i class="fa-solid fa-user-doctor-message"></i><h1>전문가 신청</h1></span><br>
+        </div><!--헤더 끝-->
+        <div class="container">
+            
+        </div>
+    </main><!--메인 끝-->
+
+
+    <!-- Footer (푸터) -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="/index/main.html">
+                    <img src="/img/logo.PNG" alt="Footer Logo">
+                </a>
+            </div>
+
+            <!-- 주요 링크 -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="/index/about.html">회사 소개</a></li>
+                    <li><a href="/index/contact.html">문의하기</a></li>
+                    <li><a href="/index/privacy.html">개인정보 처리방침</a></li>
+                    <li><a href="/index/terms.html">이용약관</a></li>
+                </ul>
+            </div>
+
+            <!-- 소셜 미디어 링크 -->
+            <div class="footer-social">
+                <a href="https://facebook.com">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/elonmusk">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/cristiano/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <p class="footer-copyright">© 2024 Dr.Petper. All rights reserved.</p>
+    </footer>
+
+    <!-- 헤드부분 자바스크립트 -->
+    <script src="/js/head.js"></script>
+</body>
+</html>
