@@ -75,101 +75,65 @@
             </a>
         </div>
     </div>
-    <div class="anno_wrap">
-
-            <main>
-                <!-- map 추가 -->
-                <div id="map" style="width:100%;height:400px;"></div> <!-- 맵크기 -->
-
-                <script>
-                    // 마커 찍을 좌표
-                    var cityhall = new naver.maps.LatLng(35.54220, 129.3383);
-
-                    var map = new naver.maps.Map('map', {
-                        center: new naver.maps.LatLng(35.54220, 129.3383), // 좌표 설정
-                        zoom: 19
-                    });
 
 
-                    // 정보창 내용
-                    var contentString = [
-                        '<div class="iw_inner">',
-                        '   <h3>그린컴퓨터아카데미 울산캠퍼스</h3>',
-                        '   <p>울산 남구 삼산중로100번길 26 케이엠빌딩 1~4층<br>',
-                        '       <img src="" width="55" height="55" alt="테스트" class="thumb"><br>',
-                        '       울산 업스퀘어 후문 - 삼산동 우체국 맞은편<br>',
-                        '       <a href="https://www.youtube.com/@_dailyvlog4843" target="_blank">www.youtube.com/@_dailyvlog4843</a>',
-                        '   </p>',
-                        '</div>'
-                    ].join('');
-                    
-                    // 마커 설정
-                    var marker = new naver.maps.Marker({
-                        map: map,
-                        position: cityhall
-                    });
+    <main>
+        <!-- 메인상단부 -->
+        <div class="st_top">
+            <h1>동물병원 현황</h1>
 
-                    // 정보 설정
-                    var infowindow = new naver.maps.InfoWindow({
-                        content: contentString
-                    });
+        </div>
 
-                    // 정보창 마커 클릭시 이벤트설정
-                    naver.maps.Event.addListener(marker, "click", function(e) {
-                        if (infowindow.getMap()) {
-                            infowindow.close();
-                        } else {
-                            infowindow.open(map, marker);
-                        }
-                    });
+        <!-- map 추가 -->
+        <div id="map" style="width:100%;height:400px;"></div> <!-- 맵크기 -->
 
 
-
-                    </script>
-            </main>
+    </main>
 
 
 
 
-            <!-- Footer (푸터) -->
-            <footer>
-                <div class="footer-content">
-                    <div class="footer-logo">
-                        <a href="/index/main.html">
-                            <img src="/img/logo.PNG" alt="Footer Logo">
-                        </a>
-                    </div>
+    <!-- Footer (푸터) -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="/index/main.html">
+                    <img src="/img/logo.PNG" alt="Footer Logo">
+                </a>
+            </div>
 
-                    <!-- 주요 링크 -->
-                    <div class="footer-links">
-                        <ul>
-                            <li><a href="/index/about.html">회사 소개</a></li>
-                            <li><a href="/index/contact.html">문의하기</a></li>
-                            <li><a href="/index/privacy.html">개인정보 처리방침</a></li>
-                            <li><a href="/index/terms.html">이용약관</a></li>
-                        </ul>
-                    </div>
+            <!-- 주요 링크 -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="/index/about.html">회사 소개</a></li>
+                    <li><a href="/index/contact.html">문의하기</a></li>
+                    <li><a href="/index/privacy.html">개인정보 처리방침</a></li>
+                    <li><a href="/index/terms.html">이용약관</a></li>
+                </ul>
+            </div>
 
-                    <!-- 소셜 미디어 링크 -->
-                    <div class="footer-social">
-                        <a href="https://facebook.com">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://x.com/elonmusk">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/cristiano/">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
+            <!-- 소셜 미디어 링크 -->
+            <div class="footer-social">
+                <a href="https://facebook.com">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/elonmusk">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/cristiano/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
 
-                <p class="footer-copyright">© 2024 Dr.Petper. All rights reserved.</p>
-            </footer>
+        <p class="footer-copyright">© 2024 Dr.Petper. All rights reserved.</p>
+    </footer>
 
-            <!-- 자바스크립트 파일 포함 -->
-            <script src="/js/head.js"></script>
-            <script src="/js/main.js"></script>
+    <!-- 자바스크립트 파일 포함 -->
+    <script src="/js/head.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/status.js"></script>
+
 
 
 
