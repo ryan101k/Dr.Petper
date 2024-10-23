@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아이디 찾기</title>
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="/css/reset.css">
+
+    <!-- 로그인 페이지 CSS -->
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <!-- 중앙에 로고 -->
+    <div class="logo">
+        <a href="/index/main.html">
+            <img src="/img/logo.PNG" alt="Logo" class="logo-img">
+        </a>
+    </div>
+
+    <!-- 로그인 폼 컨테이너 -->
+    <div class="login-container">
+        <form class="login-form" id="loginForm">
+            <!-- 아이디/전화번호 입력 -->
+            <div class="input-box">
+                <label for="id">아이디 또는 전화번호</label>
+                <input type="text" id="id" name="id" required>
+            </div>
+
+            <!-- 비밀번호 입력 -->
+            <div class="input-box">
+                <label for="password">비밀번호</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <!-- 로그인 상태 유지 -->
+            <div class="options">
+                <label>
+                    <input type="checkbox" name="keepLoggedIn">
+                    로그인 상태 유지
+                </label>
+                <a href="#" class="ip-protect">IP보안 <span class="on">ON</span></a>
+            </div>
+
+            <!-- 로그인 버튼 -->
+            <button type="submit" class="login-btn">로그인</button>
+
+            <!-- 링크들 -->
+            <div class="extra-links">
+                <a href="/index/find-password.html">비밀번호 찾기</a>
+                <a href="/index/find-id.html">아이디 찾기</a>
+                <a href="/index/signup.html">회원가입</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <p>Copyright © Dr.Petper. All rights reserved.</p>
+    </footer>
+
+    <script src="/js/login.js"></script>
+</body>
+</html>

@@ -57,3 +57,7 @@ function loadQuestions() {
         });
 }
 
+//페이지 이동기능 url 받아서 이동
+function redirectToPage(url) {
+    window.location.href = url;
+}

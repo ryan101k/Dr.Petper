@@ -35,7 +35,7 @@
                 <ul>
                     <li><a href="/index/main.html">홈</a></li>
                     <li><a href="/index/Announcement.html">공지사항</a></li>
-                    <li><a href="/index/HospitalStatus.html">병원찾기</a></li>
+                    <li><a href="/index/status.html">병원찾기</a></li>
                     <li><a href="/index/ExpertApplication.html">전문가 신청</a></li>
                     <li><a href="/index/medication-info.html">약정보</a></li>
                 </ul>
@@ -49,11 +49,11 @@
                 </a>
                 <!-- 프로필 아이콘 -->
                  <!-- 임시링크 -->
-                <a href="">
+                <a href="./my-info.html">
                     <i class="fas fa-user"></i>
                 </a>
                 <!-- 질문하기 버튼 -->
-                <button class="ask-btn" onclick="">나도 질문하기</button>
+                <button class="ask-btn" onclick="redirectToPage('/index/board.html')">나도 질문하기</button>
             </div>
         </div>
     </header>
@@ -154,15 +154,15 @@
                 <h2>Dr.Petper를  편리하게 이용하세요</h2>
                 
                 <!-- 큰 로그인 버튼 -->
-                <button class="login-btn">
-                    <a href="/index/login.html">Dr.Petper로그인</a>
+                <button class="login-btn" onclick="redirectToPage('/index/signup.html')">
+                    <p>Dr.Petper로그인</p>
                 </button>
                 
                 <!-- 작은 버튼들 -->
                 <div class="mini-buttons">
-                    <button class="mini-btn">회원가입</button>
-                    <button class="mini-btn">아이디 찾기</button>
-                    <button class="mini-btn">비밀번호 찾기</button>
+                    <button class="mini-btn" onclick="redirectToPage('/index/regist.html')">회원가입</button>
+                    <button class="mini-btn" onclick="redirectToPage('/index/searchId.html')">아이디 찾기</button>
+                    <button class="mini-btn" onclick="redirectToPage('/index/searchPw.html')">비밀번호 찾기</button>
                 </div>
             </div>
 

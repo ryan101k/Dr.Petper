@@ -5,7 +5,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
     <title>Dr.Petper 병원찾기</title>
     <!-- Font Awesome 아이콘 사용하기 위한 CDN 추가 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -18,6 +19,9 @@
 
     <!-- 병원현황 css -->
     <link rel="stylesheet" href="/css/status.css">
+
+    <!-- 네이버지도 api -->
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId="></script>
 </head>
 
 <body>
@@ -36,7 +40,7 @@
                 <ul>
                     <li><a href="/index/main.html">홈</a></li>
                     <li><a href="/index/Announcement.html">공지사항</a></li>
-                    <li><a href="/index/HospitalStatus.html">병원찾기</a></li>
+                    <li><a href="/index/status.html">병원찾기</a></li>
                     <li><a href="/index/ExpertApplication.html">전문가 신청</a></li>
                     <li><a href="/index/medication-info.html">약정보</a></li>
                 </ul>
@@ -71,65 +75,65 @@
             </a>
         </div>
     </div>
-    <div class="anno_wrap">
-
-            <main>
-
-            </main>
 
 
+    <main>
+        <!-- 메인상단부 -->
+        <div class="st_top">
+            <h1>동물병원 현황</h1>
+
+        </div>
+
+        <!-- map 추가 -->
+        <div id="map" style="width:100%;height:400px;"></div> <!-- 맵크기 -->
 
 
-
-
-
-
-
-
-
+    </main>
 
 
 
 
-            <!-- Footer (푸터) -->
-            <footer>
-                <div class="footer-content">
-                    <div class="footer-logo">
-                        <a href="/index/main.html">
-                            <img src="/img/logo.PNG" alt="Footer Logo">
-                        </a>
-                    </div>
+    <!-- Footer (푸터) -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="/index/main.html">
+                    <img src="/img/logo.PNG" alt="Footer Logo">
+                </a>
+            </div>
 
-                    <!-- 주요 링크 -->
-                    <div class="footer-links">
-                        <ul>
-                            <li><a href="/index/about.html">회사 소개</a></li>
-                            <li><a href="/index/contact.html">문의하기</a></li>
-                            <li><a href="/index/privacy.html">개인정보 처리방침</a></li>
-                            <li><a href="/index/terms.html">이용약관</a></li>
-                        </ul>
-                    </div>
+            <!-- 주요 링크 -->
+            <div class="footer-links">
+                <ul>
+                    <li><a href="/index/about.html">회사 소개</a></li>
+                    <li><a href="/index/contact.html">문의하기</a></li>
+                    <li><a href="/index/privacy.html">개인정보 처리방침</a></li>
+                    <li><a href="/index/terms.html">이용약관</a></li>
+                </ul>
+            </div>
 
-                    <!-- 소셜 미디어 링크 -->
-                    <div class="footer-social">
-                        <a href="https://facebook.com">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://x.com/elonmusk">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/cristiano/">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
+            <!-- 소셜 미디어 링크 -->
+            <div class="footer-social">
+                <a href="https://facebook.com">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/elonmusk">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/cristiano/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
 
-                <p class="footer-copyright">© 2024 Dr.Petper. All rights reserved.</p>
-            </footer>
+        <p class="footer-copyright">© 2024 Dr.Petper. All rights reserved.</p>
+    </footer>
 
-            <!-- 자바스크립트 파일 포함 -->
-            <script src="/js/head.js"></script>
-            <script src="/js/main.js"></script>
+    <!-- 자바스크립트 파일 포함 -->
+    <script src="/js/head.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/status.js"></script>
+
 
 
 
