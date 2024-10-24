@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="/css/reset.css">
         <!-- 공통 헤더/푸터 CSS -->
         <link rel="stylesheet" href="/css/header_footer.css">
+        <!-- ExpertApplication CSS  -->
+        <link rel="stylesheet" href="/css/ExpertApplication.css">
     </head>
     <body>
         <!-- Header (헤더) -->
@@ -64,16 +66,14 @@
   
       <main><!--메인-->
         <div class="header"> <!-- 헤더 -->
-            <span><i class="fa-solid fa-user-doctor-message"></i><h1>전문가 신청</h1></span><br><br>
+            <h1>전문가 신청</h1>
         </div><!--헤더 끝-->
-        <div class="container">
-            <img alt="검색" loading="lazy" width="20" height="20" decoding="async" data-nimg="1" style="color:transparent" src="https://media.a-ha.io/aha-qna/images/common/icons/mark/magnifying-000+default.svg">
-            <input enterkeyhint="search" maxlength="20" name="id" placeholder="자격증과 서류를 검색해보세요." type="text" class="css-cqkkbz ebd3d62" value="">
-            <select class="Certificate" onchange="onChangeEvent();">
-                <option value="0">정형외과 전문의 자격증</option>
-                <option value="1">정형외과 전문의 자격증</option>
-            </select>
-        </div>
+        <form class="search-box" action="" method="get">
+            <input class="search-txt" type="text" name="" placeholder="자격증을 입력하세요.">
+            <button class="search-btn" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
     </main><!--메인 끝-->
   
   
