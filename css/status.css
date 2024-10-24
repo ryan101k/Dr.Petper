@@ -1,3 +1,22 @@
-.st_top {
 
+
+
+.map {
+    border: 1px solid coral;
 }
+
+/* 메인 타이틀 */
+.st_title h1{
+    font-size: xx-large;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0px rgb(3, 31, 73), 0px 1px rgb(3, 31, 73), 
+                    1px 0px rgb(3, 31, 73), 0px -1px rgb(3, 31, 73);
+}
+
+
+
+
+
+
+
+
