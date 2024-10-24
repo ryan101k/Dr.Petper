@@ -3,9 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>회사위치</title>
+    <title>문의하기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .terms-container {
+         
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #contact-form{
+            text-align: center;
+        }
+        #contact-form a{
+            text-align: left;
+        }
+        p {
+            margin: 1em 0;
+        }
+    </style>
+
+
 </head>
-<body>
-    
+<body>  
+
+    <div class="terms-container">  
+        <a href="/index/main.html">메인으로돌아가기</a>
+        <h1>문의하기</h1>
+        <h4>사이트를 이용하는데 불편한점이나 개선사항이있으면 작성해주세요</h4>
+        <form id="contact-form" onsubmit="sendEmail(event)">
+            <label for="name">보내시는분 성함:</label><br>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">보내시는 분 이메일:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">문의 내용:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+            <button type="submit">전송하기</button>
+        </form>
+    </div>
 </body>
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+    emailjs.init("tR-Ad8Jqe-HPdjgDV");
+})();
+
+function sendEmail(event) {
+    event.preventDefault();
+
+    // 가져올 input 요소들
+    var from_name = document.getElementById("name").value; // 사용자의 이름
+    var email = document.getElementById("email").value; // 사용자의 이메일
+    var message = document.getElementById("message").value; // 문의 내용
+
+    var templateParams = {
+        from_name: from_name,  // 보낸 사람 이름
+        name: from_name,       // 이름 (보낸사람)
+        email: email,          // 이메일
+        message: message       // 문의 내용
+    };
+
+    emailjs.send('service_a2qgy3f', 'template_hivawpj', templateParams)
+        .then(function(response) {
+            alert('문의가 성공적으로 전송되었습니다!');
+        }, function(error) {
+            alert('문의 전송에 실패했습니다. 다시 시도해주세요.');
+        });
+}
+</script>
 </html>
