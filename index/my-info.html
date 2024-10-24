@@ -14,6 +14,9 @@
     <!-- 공통 헤더/푸터 CSS -->
     <link rel="stylesheet" href="/css/header_footer.css">
 
+    <!-- 내 정보 CSS -->
+    <link rel="stylesheet" href="/css/my-info.css">
+
 
 </head>
 <body>
@@ -47,7 +50,7 @@
                 </a>
                 <!-- 프로필 아이콘 -->
                  <!-- 임시링크 -->
-                <a href="/index/board.html">
+                <a href="/index/my-info.html">
                     <i class="fas fa-user"></i>
                 </a>
                 <!-- 질문하기 버튼 -->
@@ -71,36 +74,52 @@
     <main>
         <section>
             <!-- 개인정보 묶어둔 div -->
-            <div>
-                <table>
-                    <tr>
-                        <td><p>이름</p></td>
-                        <td><p>나</p></td>
-                        <td><button onclick="">수정</button></td>
-                    </tr>
-                    <tr>
-                        <td><p>닉네임</p></td>
-                        <td><p>나나</p></td>
-                        <td><button onclick="">수정</button></td>
-                    </tr>
-                    <tr>
-                        <td><p>아이디</p></td>
-                        <td><p>asd123</p></td>
-                        <td><button onclick="">수정</button></td>
-                    </tr>
-                    <tr>
-                        <td><p>이메일</p></td>
-                        <td><p>asxxxx@nxxxx.com</p></td>
-                        <td><button onclick="">수정</button></td>
-                    </tr>
-                    <tr>
-                        <td><p>전화번호</p></td>
-                        <td><p>010-1xxx-2xxx</p></td>
-                        <td><button onclick="">수정</button></td>
-                    </tr>
+            <div id="basic-information-div">
+                <!-- 기본 정보 div -->
+                <div>
+                <!-- 기본적인 정보만 출력하는 테이블 -->
+                    <table class="basic-information">
+                       <td><h1>기본정보</h1></td>
+                        
+                        
+                        <tr>
+                            <td class="basic-td1"><p>이름</p></td>
+                            <td><p>나</p></td>
+                        </tr>
+                        <tr>
+                            <td class="basic-td1"><p>닉네임</p></td>
+                            <td><p>나나</p></td>
+                        </tr>
+                        <tr>
+                            <td class="basic-td1"><p>생년월일</p></td>
+                            <td><p>2024-10-24</p></td>                           
+                        </tr>
+                        <tr>
+                            <td class="basic-td1"><p>성별</p></td>
+                            <td><p>남성</p></td>                            
+                        </tr>
+                    </table>
+                </div>
+                <!-- 연락처 정보 div -->
+                <div id="contact-information-div">
+                    
+                    <!-- 개인 연락처를 출력 하는 테이블 -->
+                    <table class="basic-information">
+                        <td><h1>연락처 정보</h1></td>
+                        <tr>
+                            <td><p>이메일</p></td>
+                            <td><p>asd@naver.com</p></td>
+                        </tr>
+                        <tr>
+                            <td><p>전화번호</p></td>
+                            <td><p>010-1xxx-2xxx</p></td> 
+                        </tr>
 
-                </table>
+                    </table>
+                </div>    
             </div>
+            <!-- 개인정보 수정하기 버튼 -->
+            <button onclick="" >수정</button>
 
         </section>
     </main>

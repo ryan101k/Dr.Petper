@@ -1,0 +1,18 @@
+#basic-information-div {
+    padding-top: 50px;   
+}
+.basic-information {
+    width: 800px;
+    border: 1px solid blue;
+    
+}
+
+.basic-information td {
+    border: 1px solid brown;
+}
+.basic-td1 {
+    width: 200px;
+}
+#contact-information-div {
+    padding-top: 50px;
+}
