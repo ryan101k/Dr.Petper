@@ -1,18 +1,25 @@
-#basic-information-div {
-    padding-top: 50px;   
+.info-div {
+    background-color: aqua;
+    border-radius: 25px;
+    width: 600px;
 }
-.basic-information {
-    width: 800px;
-    border: 1px solid blue;
-    
+.info-table {
+    margin: 30px;
+}
+.info-h {
+    font-size: 20px;
+    height: 50px;
 }
 
-.basic-information td {
-    border: 1px solid brown;
+.info-td1 {
+    height: 50px;
+    border-top: 1px solid black;
+    width: 100px;
+    
+    
 }
-.basic-td1 {
-    width: 200px;
-}
-#contact-information-div {
-    padding-top: 50px;
+.info-td2 {
+    height: 50px;
+    border-top: 1px solid black;
+    width: 500px;
 }
