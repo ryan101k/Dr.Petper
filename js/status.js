@@ -7,7 +7,7 @@ var position = new naver.maps.LatLng(35.54205, 129.33825);
 // 중앙 좌표
 var map = new naver.maps.Map('map', {
     center: new naver.maps.LatLng(35.54205, 129.33825), // 좌표 설정
-    zoom: 18
+    zoom: 13
 });
 
 
@@ -26,6 +26,40 @@ var marker = new naver.maps.Marker({
     }
 
 });
+
+
+// 지도 마커 추가 예시 - html 버튼 추가하기
+var a1 = new naver.maps.LatLng(35.54205, 122.33825),
+    b1 = new naver.maps.LatLng(35.54205, 122.33825);
+
+$("#to-a1").on("click", function(e) {
+    e.preventDefault();
+
+    map.setCenter(a1);
+});
+
+
+
+$("#to-b1").on("click", function(e) {
+    e.preventDefault();
+
+    map.panTo(b1);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +100,6 @@ naver.maps.Event.addListener(marker, "click", function(e) {
         infowindow.open(map, marker);
     }
 });
-
 
 
 
