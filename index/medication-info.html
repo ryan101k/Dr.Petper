@@ -72,59 +72,49 @@
         <!-- 메인 시작부분 -->
         <main>
             <section>
-                <!-- 약 이름 검색하는 부분 묶은거 -->
-                <div id="medication-header">
-                    <form action="">
-                        <!-- 약 검색창 테이블 -->
-                        <table>   
-                            <tr>
-                                <td id="medication-h">
-                                    <p>약 이름</p>
+                <div class="medication-info-div1">
+                    <table>
+                        <form action="">
+                            <tr class="medication-info-table1-tr">
+                                <td class="medication-info-table1-td">
+                                    <select name="" id="medication-info-select">
+                                        <option value="">용도</option>
+                                        <option value="">품목명</option>
+                                    </select>
                                 </td>
-                                <td >
-                                    <!-- 약 검색 -->
-                                    <input type="text" id="medication-search">
-                                    <!-- 약 검색 후 버튼 -->
-                                    <input type="submit" id="medication-search-btn" value="검색">
+                                <td class="medication-info-search">
+                                    <input type="text">
+                                </td>
+                                <td class="medication-info-search-btn">
+                                    <input type="button" value="검색">
                                 </td>
                             </tr>
-                        </table>
-                    </form>
-                </div>
-                <!-- 약 번호 약 정보 묶은 거 -->
-                <div id="medication-main">
-                    <!-- 약 번호 이름 상단에 띄우는 테이블 -->
-                    <table id="medication-table1">
-                        <tr>
-                            <!-- 약 카테고리 -->
-                            <td class="medication-num">용도</td>
-                            <td class="medication-name">품목명</td>
-                            <td class="medication-ingredient">성분명</td>
-                            <td class="medication-registration">허가일</td>
-                            <td class="company-name">업체명</td>
-                        </tr>
-                    </table>
-                    <!-- 약 이름을 누르면 약 정보로 넘어가는 테이블 -->
-                    <table>
-                        <tr>
-                            <td class="medication-num">동물용 의약품</td>
-                            <td class="medication-name"><a href="">몸에 좋은 약</a></td>
-                            <td class="medication-ingredient">성분명</td>
-                            <td class="medication-registration">허가일</td>
-                            <td class="company-name">업체명</td>
-                        </tr>   
-                        <tr>
-                            <td class="medication-num">동물용 의약외품</td>
-                            <td class="medication-name"><a href="">몸에 조금 좋은 약</a></td>
-                            <td class="medication-ingredient">성분명</td>
-                            <td class="medication-registration">허가일</td>
-                            <td class="company-name">업체명</td>
-                        </tr>
-
+                        </form>
                     </table>
                 </div>
-              
-                
+                   
+                <div class="medication-info-div2">
+                    <table class="medication-info-table2">
+                        <tr class="medication-info-table2-tr">
+                            <td class="medication-info-table2-td">용도</td>
+                            <td class="medication-info-table2-td">품목명</td>
+                            <td class="medication-info-table2-td">성분명</td>
+                            <td class="medication-info-table2-td">허가일</td>
+                            <td class="medication-info-table2-td">업체명</td>
+                        </tr>
+                           
+                        <tr>
+                            <td class="medication-info-table2-td">용도</td>
+                            <td class="medication-info-table2-td">
+                                <a href="">품목명</a>
+                            </td class="medication-info-table2-td">
+                            <td class="medication-info-table2-td">성분명</td>
+                            <td class="medication-info-table2-td">허가일</td>
+                            <td class="medication-info-table2-td">업체명</td>
+                           
+                        </tr>
+                    </table>
+                </div>
             </section>
         </main>
 

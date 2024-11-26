@@ -1,50 +1,26 @@
-#medication-header {
-    padding-bottom: 50px;
+.medication-info-div1{
+    background-color: aqua;
+    padding-bottom: 20px;
 }
 
-#medication-h {
-    font-size: 30px;
-    padding-right: 50px; 
-}
-#medication-main {
-    padding-bottom: 30px;
-}
-#medication-table1 {
-    font-size: 25px;   
-}
-#medication-search {
-    width: 400px;
-    height: 40px;
 
+.medication-info-table1-td{
+    padding-left: 150px;
 }
-#medication-search-btn {
-    width: 100px;
-    height: 40px;
-    font-size: 25px;    
+
+.medication-info-div2{
+    background-color: blueviolet;
+    border-radius: 25px;
+    width: 600px;
+    
 }
-.medication-num {
-    font-size: 25px;
-    border: 3px solid brown;
-    width: 100px;
-    height: 30px;   
+.medication-info-table2{
+    margin: 20px;
+    margin-left: 30px;
 }
-.medication-name {
-    width: 330px;
-    height: 50px;
-    border: 3px solid blue;
-    text-align: center;
-}
-.medication-ingredient {
-    width: 200px;
-    border: 3px solid red;
-}
-.medication-registration {
-    width: 90px;
-    border: 3px solid lawngreen;
-}
-.company-name {
-    width: 170px;
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
+
+.medication-info-table2-td{
+    padding-right: 60px;
+    padding-bottom: 20px;
     
 }
