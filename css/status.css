@@ -4,6 +4,9 @@
 .map {
     border: 1px solid coral;
 }
+#to-a1 {
+    z-index: 1000;
+}
 
 /* 메인 타이틀 */
 .st_title h1{
@@ -20,6 +23,9 @@
     border: 1px solid rgba(153, 204, 255, 0.983);
     
     
+    
+
+    color: gray;
 }
 
 
